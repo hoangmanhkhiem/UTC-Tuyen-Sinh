@@ -1,0 +1,220 @@
+/* slider */
+
+.slider, .slider img {
+    width: 100%;
+}
+
+.slider {
+    width: 100%;
+}
+
+.infor {
+    width: 66.667%;
+}
+
+.attraction__infor {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 8px var(--text-color);
+    margin-top: 40px;
+}
+
+.attaction__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+}
+
+.attraction__item {
+    width: 25%;
+    font-size: 1.6rem;
+    color: #fff;
+    position: relative;
+}
+
+.attraction__item a:hover {
+    transform: translateY(-8px);
+}
+
+.attraction__item a {
+    display: inline-block;
+    padding: 40px 30px;
+    color: #fff;
+    transition: 0.25s ease;
+}
+
+.attraction__icon {
+    font-size: 2.4rem;
+    border-radius: 50%;
+    color: #fff;
+    border: 4px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attraction__title {
+    font-weight: 600;
+    height: 64px;
+    margin-top: 16px;
+}
+
+.attraction__desc {
+    margin-top: 12px;
+}
+
+.attraction__item:nth-child(odd) {
+    background-color: var(--main-bg);
+}
+
+.attraction__item:nth-child(even) {
+    background-color: var(--main-yellow);
+}
+
+/** chương trình đào tạo */
+
+
+.program__image {
+    border-radius: 15px;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 3px 4px 6px var(--text-color);
+    text-align: center;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+.program__notifications {
+    margin-top: 12px;
+    list-style-type: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.notification {
+    padding: 12px 24px;
+    transition: all 0.5s ease;
+}
+
+.notification + .notification {
+    border-top: 1px solid #ccc;
+}
+
+.notification:hover {
+    background-color: var(--second-bg);
+}
+
+.noti__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.noti__desc p {
+    padding: 16px 0;
+}
+
+/** Khoa Ngành */
+
+.major-programs {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--second-bg);
+    border-radius: 4px;
+    padding: 40px 20px;
+    margin-top: 16px;
+}
+
+.major-program {
+    padding: 0 12px;
+    width: 50%;
+    text-align: center;
+}
+
+.major-thumnail {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 6px;
+    border: 2px solid var(--main-yellow);
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.major-thumnail:hover {
+    padding: 4px;
+    border-width: 3px;
+}
+
+.major-thumnail img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.map {
+    width: 100%;
+}
+
+.map iframe{
+    box-shadow: 3px 4px 6px #ccc;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+*demo
+article {
+    margin-top: 32px;
+}
+
+.thumnail {
+    position: relative;
+}
+
+strong {
+    color: var(--main-yellow);
+    font-weight: 500;
+}
+
+.content p {
+    margin: 8px 0 0 12px;
+}
+
+.content a {
+    color: var(--main-bg);
+}
+
+.content h4 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: right;
+    margin-top: 32px;
+}
+
+.thumnail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.thumnail-title {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
