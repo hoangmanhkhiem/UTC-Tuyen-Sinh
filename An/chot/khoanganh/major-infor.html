@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        property = "og:image"
+        content="https://thituyensinh.ican.vn/wp-content/uploads/2021/02/truong-dai-hoc-mo-tphcm-tuyen-dung-giang-vien-trinh-do-tien-si-2019-docx-1572607376073.jpeg"
+    >
+    <title>Khoa - Ngành</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--active font -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" href="image/Logo-Dai-Hoc-Giao-Thong-Van-Tai-UTC.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css">
+</head> 
+<body>
+    <header>
+        <div class="header__logo">
+            <img src="image/Logo-Dai-Hoc-Giao-Thong-Van-Tai-UTC.webp" alt="">
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="header__menu">
+            
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html" class="nav__item-link ">Trang chủ</a></li>
+                <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Ngành Học
+                <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Tuyển Sinh</a></li>
+                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link">Tham Khảo</a></li>
+            </ul>
+        </div>
+        <div class="header__search">
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
+                <div class="search__icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ul class="suggestions">
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="infor">
+                <nav>
+                    <ul class="nav-tool">
+                        <li class="nav-tool-item" onclick="changeProgram(1)">Chương trình đại trà</li>
+                        <li class="nav-tool-item" onclick="changeProgram(2)">Chương trình Chất lượng cao</li>
+                        <li class="nav-tool-item" onclick="changeProgram(3)">Chương trình liên kết</li>
+                    </ul>
+                </nav>
+                <div class="faculty">
+                    <h2 class="title-1">Thông tin Khoa - Ngành</h2>
+                    <div class="faculty-wrap">
+                        <ul class="faculty-list">
+                            <div class="program-intro">
+                                <h3 class="title-2 program-title">Giới thiệu Chương trình đại trà</h3>
+                                <p class="program-desc">
+                                    Chương trình đại trà là chương trình đào tạo đại học chính quy của Trường Đại học Giao Thông Vận Tải có mức học phí tuân theo quy định của Chính phủ với các Khoa, Ngành: 
+                                </p>
+                            </div>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/du-toan-xay-dung-cong-trinh.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">KHOA CÔNG TRÌNH</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ký Thuật Xây Dựng Công Trình Giao Thông </a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ký Thuật Xây Dựng Công Trình Thủy </a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/banner-cong-nghe-thong-tin.png" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Công nghệ thông tin</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Công nghệ thông tin</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Khoa học máy tính</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/05-ND.gif" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Quản Lý Xây Dựng</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kinh Tế Xây Dựng</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Quản Lý Xây Dựng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/nganh-kinh-te-van-tai.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Vận Tải Kinh Tế</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kinh Tế Vận Tải</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Khai Thác Vận Tải</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Quản Trị Kinh Doanh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kế Toán</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kinh Tế</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/nganh-ky-thuat-xay-dung-ra-truong-lam-gi-7.png" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Kỹ Thuật Xây Dựng</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Xây Dựng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/4.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Điện-Điện Tử</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Điện</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Điều Khiển Và Tự Động Hóa</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Điện Tử Viễn Thông</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/trach-nhiem-co-quan-quan-ly-16523217676861881724838.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Cơ Khí</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Cơ Khí Động Lực</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Cơ Khí</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Ô Tô</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Nhiệt</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/tải xuống.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Môi Trường Và An Toàn Gaio Thông</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Công Nghệ Kỹ Thuât Giao Thông</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kỹ Thuật Môi Trường</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/images.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Cơ Bản</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Toán Ứng Dụng</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            
+                        </ul>
+                        <ul class="faculty-list">
+                            <div class="program-intro">
+                                <h3 class="title-2">Giới thiệu Chương trình Chất lượng cao</h3>
+                                <p class="program-desc">
+                                    <p>
+                                        <div class="space"></div>Khoa Đào tạo quốc tế tiền thân là Trung tâm Hợp tác quốc tế về đào tạo và nghiên cứu được thành lập theo Quyết định số 1552/QĐ-ĐHGTVT ngày 09/09/2010 của Hiệu trưởng Trường Đại học Giao thông vận tải nhằm thực hiện những mục tiêu về quốc tế hóa giáo dục. Ngày 04/10/2013, Trung tâm hợp tác quốc tế về đào tạo và nghiên cứu đổi tên thành Trung tâm đào tạo quốc tế theo Quyết định số 1803/QĐ- ĐHGTVT của Hiệu trưởng Trường Đại học GTVT. Với những nỗ lực trong hợp tác quốc tế về đào tạo và nghiên cứu trong hơn 5 năm qua, Trung tâm đã được chuyển đổi thành Khoa Đào tạo quốc tế theo quyết định số 882/QĐ-ĐHGTVT ngày 14/04/2016 của Hiệu trưởng Trường Đại học GTVT. 
+                                    </p>
+                                    <p>
+                                        <div class="space"></div>Khoa Đào tạo quốc tế đóng vai trò tiên phong trong việc phát triển các chương trình đào tạo và định hướng nghiên cứu theo hướng chuẩn mực quốc tế và có sự tham gia của các đối tác quốc tế trên cơ sở bình đẳng song phương. Những hoạt động của Khoa Đào tạo quốc tế đóng góp quan  trọng trong việc nâng cao chất lượng đào tạo và nghiên cứu khoa học của trường Đại học GTVT, góp phần đào tạo nguồn nhân lực có trình độ và chất lượng cao, giỏi ngoại ngữ, phục vụ sự nghiệp công nghiệp hoá, hiện đại hoá đất nước, đáp ứng yêu cầu hội nhập quốc tế trong giáo dục đại học tại Việt Nam.
+                                    </p>
+                                    <p>
+                                        <div class="space"></div>Đồng hành với Khoa Đào tạo quốc tế là sự phối hợp hiệu quả của các phòng, ban, các khoa chuyên môn và đặc biệt là của đội ngũ những nhà giáo, nhà khoa học có kinh nghiệm giảng dạy và nghiên cứu, có chuyên môn sâu, thành thạo ngoại ngữ, am hiểu đối tác quốc tế cũng như thị trường đào tạo và nghiên cứu khoa học ở Việt Nam.
+                                    </p>
+                                    
+                            </div>
+
+                            
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/ined.jpg" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Khoa Đào tạo Quốc Tế</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Công Nghệ Thông Tin Việt-Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Cơ Khí Ô Tô Việt-Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Quản Trị Kinh Doanh Việt-Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kế Toán Tổng Họp Việt-Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Kinh Tế Xây Dựng Công Trình Giao Thông Việt-Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Quản Lý Xây Dựng Việt-Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Công Trình Giao Thông Đô Thị Việt-Nhật</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Cầu Đường Bộ Việt-Anh</a></li>
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Cầu Đường Bộ Việt-Pháp</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                            
+                        </ul>
+                        <ul class="faculty-list">
+                            <div class="program-intro">
+                                <h3 class="title-2">Giới thiệu Chương trình liên kết</h3>
+                                <p class="program-desc">
+                                    Với mục đích tạo cơ hội cho sinh viên tiếp cận chương trình đào tạo đại học có chất lượng, lấy bằng cấp nước ngoài & trở thành công dân toàn cầu, chúng tôi xin giới thiệu Thông tin tuyển sinh Chương trình Liên kết Quốc tế giữa Trường Đại học Giao Thông Vận Tải & Đại học BEDFORDSHIRE, Anh và Đại học EM Normandie, Pháp.
+                                </p>
+                            </div>
+
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/BEDFORDSHIRE, VƯƠNG QUỐC ANH.isij" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Chương trình liên kết quốc tế BEDFORDSHIRE, Vương Quốc Anh</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Chuyên ngành quản Lý Xây Dựng</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </a></li>
+                            <li class="faculty-item"><a href="#">
+                                <div class="faculty-thumnail">
+                                    <img src="image/EM.isij" alt="">
+                                </div>
+                                <div class="faculty-detail">
+                                    <h3 class="title-2 faculty-name">Chương trình liên kết quốc tế EM Normandie</h3>
+                                    <ul class="major-list">
+                                        <li class="major-item"><a href="#"><i class="fa-solid fa-caret-right"></i> Ngành Quản Trị Kinh Doanh</a></li>
+                                    </ul>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="swipe-left-btn swipe-btn"><i class="fa-solid fa-angles-left"></i></button>
+            <div class="side-infor">
+                <div class="heading-on-mobile">
+                    <h3 class="title-1">KHÁM PHÁ UTC</h3>
+                </div>
+                <div class="register-form side-section">
+                    <h3 class="title-1 register-form__heading">CÂU HỎI TUYỂN SINH</h3>
+                    <div class="register-form__input  form">
+                        <h1 class="title-2">Đăng kí nhận thông tin: </h1>
+                        <div class="register-form__input-item form-field">
+                            <input type="text" id="name" class="form-input" placeholder=" ">
+                            <label class="form-label" for="name">Họ tên</label>
+                        </div>
+                        <div class="register-form__input-item form-field">
+                            <input type="email" id="email" class="form-input" placeholder=" ">
+                            <label class="form-label" for="email">Email</label>
+                        </div>
+                        <div class="register-form__input-item form-field">
+                            <input type="number" id="phone" class="form-input" placeholder=" ">
+                            <label class="form-label" for="phone">Điện thoại</label>
+                        </div>
+
+                        <div class="form-field">
+                            <select id="register-seclect" class="form-input">
+                                <option value="CQ-DT">Đại học Chính quy (Hệ đại trà) </option>
+                                <option value="CQ-CLC">Đại học Chính quy (Chất lượng cao)</option>
+                                <option value="B2-LT">Bằng 2 - Liên thông</option>
+                            </select>
+                            <label for="register-seclect" class="form-label">Hệ đào tạo</label>
+                        </div>
+
+                        <div class="form-field">
+                            <textarea name="question" id="register-question" cols="30" rows="6" placeholder="" class="form-input" ></textarea>
+                            <label for="register-question" class="form-label">Message</label>
+                        </div>
+                        <button class="submit">Gửi</button>
+                    </div>
+                </div>
+                
+                <div class="fan-page side-section">
+                    <h3 class="video__title title-1">GROUPS FB</h3>
+                    <a href="https://www.facebook.com/groups/135441209921927"><img src="image/de_thi_utc.png" alt="" class="fanpage-img"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="modal" id="modal">
+            <div class="modal-container">
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+                <div class="major-modal">
+                    <h3 class="title">Ngành Công nghệ thông tin</h3>
+                    <p class="content">
+                        <div class="code">Mã ngành: <span>7480201</span></div>
+                        <h3>Nội dung đào tạo:</h3>
+                        <p>
+                            Ngành Công nghệ thông tin đào tạo các cử nhân nắm vững các kiến thức chuyên môn; có khả năng vận hành, quản lý, phát triển các ứng dụng CNTT; đáp ứng nhu cầu nhân lực CNTT trong các lĩnh vực chuyên môn khác nhau.
+                        </p>
+                        <h3>Liên hệ: </h3>
+                        <ul>
+                            <li><span>ĐỊA ĐIỂM HỌC TẬP:</span> 03 Cầu Giấy,Phường Láng Hạ,Quận Đống Đa,Hà Nội</li>
+                            <li><span>VĂN PHÒNG KHOA CÔNG NGHỆ THÔNG TIN</span></li>
+                            <li>Tầng 3 Nhà A9 - Trường Đại Học Giao Thông Vận Tải</li>
+                            <li><span>Điện thoại:</span> 043.7664679</li>
+                            <li><span>Website:</span><a href="http://fit.utc.edu.vn">fit.utc.edu.vn</a></li>
+                            <li><span>Email:</span> khoacntt@utc.edu.vn</li>
+                            <li><span>Email:</span><a href="https://www.facebook.com/groups/193268050719579">https://www.facebook.com/groups/193268050719579</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact-list">
+                <div class="footer__logo">
+                    <img src="image/Logo-Dai-Hoc-Giao-Thong-Van-Tai-UTC.webp" alt="UTC">
+                </div>
+                <ul class="contacts">
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-location-dot"></i> Địa chỉ: Số 3 phố Cầu Giấy, P.Láng Thượng, Q.Đống Đa, Hà Nội.
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-phone"></i> Điện thoại: (84.24) 376 - 633 - 11  -  Fax: (84.24)  376 - 696 - 13
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-envelope"></i> dhgtvt@utc.edu.vn
+                    </a></li>
+                </ul>
+
+            </div>
+            <div class="facility-list">
+                <h3 class="title-2 footer__title">Cơ sở</h3>
+                <ul class="facilities">
+                    <li class="facility footer__item"><a href="#">Hà Nội: Trường Đại học GTVT Hà Nội</a> </li>
+                    <li class="facility footer__item"><a href="#">Tp Hồ Chí Minh: Phân hiệu trường Đại học GTVT Hà Nội</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>University of Transpot and Communication © 2023. Nhóm 9 </p>
+                <ul class="socials">
+                    <li class="social"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="social"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+        
+        <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="p2.js"></script>
+</body>
+</html>

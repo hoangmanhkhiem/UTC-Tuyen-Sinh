@@ -1,0 +1,321 @@
+/* variable */
+:root {
+    --main-bg: #FF6E31;
+    --second-bg: #e8f0fe;
+    --text-color: #06283D;
+    --main-yellow: #e8aa42;
+}
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    font-size: 1.6rem;
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+/* button */
+button {
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+    box-shadow: 3px 4px 8px #ccc;
+    transition: 0.2s;
+}
+button.submit {
+    display: block;
+    margin-left: auto;
+    background-color: var(--main-bg);
+    color: #fff;
+    box-shadow: var(--text-color) 3px 3px 0;
+}
+.space {
+    display: inline-block;
+    width: 40px;
+}
+button.to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding: 0;
+    font-size: 4rem;
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--main-yellow);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
+    z-index: 3;
+}
+button.swipe-btn {
+    display: none;
+}
+/* title */
+.title-1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-top: 24px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+.title-2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 12px;
+    color: var(--text-color);
+}
+/* animation */
+.to-top.show {
+    opacity: 0.7;
+    transform: translateY(0);
+}
+/* header - start */
+header {
+    height: 100px;
+    background: var(--main-bg);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.menu-icon {
+    display: none;
+}
+.header__logo img{
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav__list {
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.8rem;
+    font-weight: 550;
+    display: flex;
+}
+.nav__item {
+    padding: 8px 12px;
+}
+.nav__item-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+.search {
+    border-radius: 8px;
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+.search__input {
+    width: 240px;
+    padding: 6px 20px;
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 8px 0 0 8px;
+    color: var(--text-color);
+}
+.search__icon {
+    padding: 6px 16px;
+    background-color: var(--main-yellow);
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+.fa-magnifying-glass:before{
+    content: "\f002";
+    color: #fff;
+    font-size: 1.6rem;
+    position: relative;
+    top: 1px;
+}
+/* section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;   
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.container + .container {
+    margin-top: 40px;
+}
+.side-section + .side-section {
+    margin-top: 54px;
+}
+/* side infor */
+.side-infor {
+    width: 33.333%;
+    padding-left: 48px;
+    transition: all 0.3s ease;
+}
+.heading-on-mobile {
+    display: none;
+}
+.heading-on-mobile h3 {
+    margin: 0;
+    text-align: center;
+}
+.fanpage-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 12px;
+    border: 2px solid var(--text-color);
+}
+/* form  */
+.form {
+    margin-top: 12px;
+    padding: 20px;
+    border: 2px solid var(--text-color);
+    border-radius: 4px;
+    background-color: #e8f0fe;
+}
+.form-field {
+    position: relative;
+    margin-top: 16px;
+}
+.form-input{
+    border-radius: 4px;
+    border: 2px solid var(--text-color);
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    transition: all 0.25s ease;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+select.form-input {
+    padding: 12px 16px;
+}
+.form-input:not(:placeholder-shown),.form-input:focus { /*form-input:not(:placeholder-shown) : chọn các phần tử có nhập rồi; form-input:focus : phần tử được nhấn chọn*/
+    border-color: var(--main-bg);
+    font-weight: 500;
+    background-color: #e8f0fe;
+}
+.form-label {
+    font-size: 1.6rem;
+    position: absolute;
+    left: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    color: #999;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+textarea.form-input + .form-label {
+    top: 24px;
+}
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label {
+    background-color: #e8f0fe;
+    top: 0%;
+    left: 11px;
+    display: inline-block;
+    padding: 0 10px;
+    color: var(--main-bg);
+    font-weight: 500;
+}
+select{
+    padding: 0 18px;
+}
+textarea {
+    resize: vertical;
+}
+/* footer */
+footer {
+    background-color: var(--main-bg);
+    margin-top: 50px;
+    color: #fff;
+}
+footer > .container {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.contact-list, .facility-list {
+    width: 50%;
+}
+.facility-list {
+    padding-left: 80px;
+}
+.facilities {
+    margin-top: 30px;
+}
+.footer__title {
+    color: #fff;
+    margin-top: 12px;
+}
+.footer__logo {
+    margin-bottom: 24px;
+    margin-left: -28px;
+}
+.footer__logo img {
+    width: 25%;
+}
+.footer__item {
+    margin-top: 8px;
+    display: inline-block;
+}
+.footer__item:hover a{
+    transition: 0.25s ease;
+    color: var(--main-yellow);
+}
+.footer__item a i {
+    display: inline-block;
+    width: 16px;
+    font-size: 1.7rem;
+    margin-right: 4px;
+}
+.socials {
+    text-align:right ;
+    flex: 1;
+}
+.social {
+    display: inline-block;
+    font-size: 3.2rem;
+    width: 24px;
+    margin:0 12px;
+}
+.copyright {
+    background-color: var(--text-color);
+    padding: 8px 0;
+    text-align: center;
+}
+.copyright .container {
+    margin: 0 auto;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+}
