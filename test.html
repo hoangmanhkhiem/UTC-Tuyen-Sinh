@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        property = "og:image"
+        content="link"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/Style/base.css">
+    <link rel="stylesheet" href="./assets/Style/main.css">
+    <link rel="stylesheet" href="./assets/Style/responsive.css">
+    <link rel="shortcut icon" href="./assets/Images/logo_mau.png">
+    <title>Cuộc thi lập trình</title>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <img src="./assets/Images/logo.png" alt="">
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="header__menu">
+            
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html" class="nav__item-link ">Trang chủ</a></li>
+                <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Khoa Ngành</a></li>
+                <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Thông tin tuyển sinh</a></li>
+                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link underline">Thông tin tham khảo</a></li>
+            </ul>
+        </div>
+        <div class="header__search">
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
+                <div class="search__icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ul class="suggestions">
+                </ul>
+            </div>
+        </div>
+    </header>
+    <style>
+        .test-content{
+            display: flex;
+            margin: 20px auto;
+            width: 90%
+        }
+        .test-container{
+            width: 90%;
+            border: solid 2px black;
+            border-radius: 15px;
+            /* padding: 1px 7px 3px 7px; */
+            margin-right: 15px;
+        }
+        .test-container >h3{
+            padding: 5px;
+            background-color: black;
+            color: #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .sticky-post img{
+            max-width: 100%;
+        }
+        .sticky-post{
+            border-top: solid 2px #ccc;
+            padding: 20px;
+        }
+        .sticky-post ul{
+            list-style-type: disc;
+            padding-left: 30px;
+        }
+        .sticky-post a{
+            color: rgb(30, 25, 188);
+            max-width: 100%;
+        }
+        .sticky-post p,.sticky-post h2,.sticky-post b,.sticky-post img,.sticky-post ul li{
+            padding: 5px 0;
+        }
+        .blog-sidebox {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            border: solid 1px black;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .sidebox-contest{
+            padding: 10px;
+            border-top: solid 1px #ccc;
+        }
+        .sidebox-contest a{
+            text-align: center;
+            font-weight: bold;
+            color: blue;
+        }
+        .blog-sidebox h3{
+            background-color: black;
+            color: #fff;
+            padding-left: 5px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+        .blog-sidebox .fa-solid{
+            float: right;
+            padding: 2px;
+        }
+        .sidebox-comment{
+            padding: 10px;
+            border-top: solid 1px #ccc;
+        }
+        @media (max-width : 739px){
+            .test-content{
+                display: block;
+            }
+            .test-container,.blog-sidebar{
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="test-content">
+        <div class="test-container">
+            <h3>Tin tức</h3>
+            <section class="sticky-post">
+            <div style="border-bottom: solid 2px #ccc;">
+                <h2>Marathon Coder 2023</h2>
+                <p><i class="fa-solid fa-star"></i>Ho_Sy_Kien_TDH3 đã đăng 2 ngày trước <i class="fa-solid fa-comments"></i>1</p>
+                <h1>CUỘC THI : MARATHON CODER 2023</h1>
+            </div>
+            <div>
+                <b>Nhằm rèn luyện kỹ năng cho sinh viên mới bắt đầu làm quen với lập trình máy tính, CLB sinh viên Kỹ thuật Điện - Điện tử được sự chỉ đạo của Khoa Điện - Điện tử cùng với sự giúp đỡ, phối hợp của các thầy cô Khoa Điện - Điện tử và Khoa Công Nghệ Thông Tin đã tổ chức cuộc thi lập trình dành cho sinh viên K59, K60 của hai Khoa và đặc biệt là thành viên trong CLB Kỹ thuật sinh viên khoa Điện - Điện tử.</b>
+                <p>THỂ LỆ CUỘC THI</p>
+                <p>▶️Từ 02/10 đến 10/10: Sinh viên tự đăng ký tài khoản tại <a href="http://laptrinhonline.club/">http://laptrinhonline.club/</a> và đăng ký tham dự với BTC. Sinh viên làm luyện tập trên các bài tập sẵn có trong trang.</p>
+                <p>▶️Từ 10/10 đến 28/10: Sinh viên tham gia các vòng thi tuần lúc 20h đến 22h thứ Sáu hàng tuần, tại nhà.</p>
+                <ul>
+                    <li>Vòng loại lần 1: từ 20-22h ngày 10/10/2023</li>
+                    <li>Vòng loại lần 2: từ 20-22h ngày 13/10/2023</li>
+                    <li>Vòng loại lần 3: từ 20-22h ngày 17/10/2023</li>
+                    <li>Vòng loại lần 4: từ 20-22h ngày 21/10/2023</li>
+                </ul>
+                <p>▶️ Ngày 28/10: Các sinh viên trong danh sách vòng Chung kết có mặt tại Phòng máy tính của Trường để thi vòng chung kết.</p>
+                <p>*Cơ cấu giải thưởng:</p>
+                <p>Giải cá nhân:</p>
+                <p>Giải Chung cuộc:</p>
+                <ul>
+                    <li>01 giải Nhất: 2.000.000 VND</li>
+                    <li>02 giải Nhì: 1.000.000 VND</li>
+                    <li>03 giải Ba: 500.000 VND</li>
+                </ul>
+                <p>Giải Tuần: Mỗi tuần 01 giải Nhất: 500.000 VND , 01 giải Nhì: 300.000 VND, 01 giải Ba: 200.000 VND</p>
+                <p>01 giải Giao lưu: 300.000 VND</p>
+                <ul>
+                    <li>Giải tập thể: Giải cho lớp có thành viên tham dự nhiều nhất: 500.000 VND</li>
+                </ul>
+                <p>⚙️ Đăng kí:</p>
+                <p>-Để đăng kí tài khoản các bạn truy cập: Tên TK: Tên_Mã sinh viên</p>
+                <p><a href="">https://docs.google.com/forms/d/1wU6jhLYkJCAiquWwPwqVrcdOgn1Tkjh9lFvfOSY_Vvk/viewform?ts=5d81c17d&edit_requested=true</a></p>
+                <p>-Để nộp bài các bạn truy cập</p>
+                <p><a href="https://drive.google.com/file/d/1iaj0eCldz7cVFre3jeofSlJby9Uz3vWk/view?usp=sharing">https://drive.google.com/file/d/1iaj0eCldz7cVFre3jeofSlJby9Uz3vWk/view?usp=sharing</a></p>
+                <p>Thắc mắc liên hệ : https://zalo.me/g/mblbig066</p>
+            </div>
+            </section>
+            <section class="sticky-post">
+                <h2>Chiến thần thiết kế thuật toán vòng chung kết</h2>
+                <p><i class="fa-solid fa-star"></i>creator đã đăng 10 ngày trước <i class="fa-solid fa-comments"></i> 0</p>
+                <img src="assets/Images/CTTKTTCK.jpg" alt="">
+    
+            </section>
+            <section class="sticky-post">
+                <h2>Contest luyện tập hàng tuần</h2>
+                <p><i class="fa-solid fa-star"></i>creator đã đăng 31 ngày trước <i class="fa-solid fa-comments"></i> 0</p>
+                <img src="assets/Images/banner.png" alt="">
+            </section>
+            <section class="sticky-post">
+                <h2>THE IT CLUBS FRESHMEN CODE WAR CONTEST</h2>
+                <p><i class="fa-solid fa-star"></i>creator đã đăng vào 5 tháng 5 năm 2023, 5:04 a.m. <i class="fa-solid fa-comments"></i> 0</p>
+                <img src="assets/Images/test3.jpg" alt="">
+            </section>
+            <section class="sticky-post">
+                <h2>Cuộc thi Olympic Tin học cấp Trường năm 2022</h2>
+                <p><i class="fa-solid fa-star"></i>Dinh_Tung đã đăng vào 20 tháng 9 năm 2022, 4:45 p.m. 0</p>
+                <img src="assets/Images/test4.jpg" alt="">
+                <h4>THÔNG BÁO KẾ HOẠCH ÔN TẬP, TỔ CHỨC KỲ THI OLP TIN HỌC CẤP TRƯỜNG VÀ TUYỂN CHỌN ĐỘI TUYỂN OLP TIN HỌC SINH VIÊN TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI NĂM 2022</h4>
+                <p>Chi tiết xem tại: <a href="">https://www.facebook.com/groups/fitutc/permalink/5655331127846550/</a></p>
+                <p><b>1. Kế hoạch ôn tập</b></p>
+                <ul>
+                    <li>Phụ trách lớp: Thầy Phạm Xuân Tích</li>
+                    <li>Hình thức học: Online kết hợp Offline dự kiến từ ngày 22/09/2022 đến 05/11/2022</li>
+                    <li>Tham gia Group Chat của lớp học trên facebook tại: <a href=""> https://m.me/j/AbYzEgYdABq4ikVD/</a></li>
+                </ul>
+                <p><b>2. Các cuộc thi và kế hoạch tuyển chọn</b></p>
+                <ul>
+                    <li>OLP Tin học cấp trường vòng thi Online thứ nhất do Khoa CNTT tổ chức: 02/10/2022</li>
+                    <li>OLP Tin học cấp trường vòng thi Online thứ hai do Khoa CNTT tổ chức: 09/10/2022</li>
+                    <li>Vòng ICPC miền Bắc 15-16/10/2022</li>
+                    <li>Vòng ICPC miền Trung 22-23/10/2022</li>
+                    <li>Vòng ICPC miền Nam 29-30/10/2022</li>
+                    <li>OLP Tin học cấp trường vòng Chung kết Offline do Khoa CNTT tổ chức: 06/11/2022</li>
+                    <li>Kỳ thi ICPC Quốc gia năm 2022: 12-13/11/2022</li>
+                    <li>Olympic Tin học Sinh viên Việt Nam lần thứ 31 (OLP'22) và Kỳ thi lập trình sinh viên Quốc tế ICPC Asia HoChiMinh City: 6/12/2022 – 9/12/2022 Tuyển chọn đội tuyển: 7/11/2022 – 15/11/2022, Các HLV sẽ dựa vào quá trình ôn luyện, ôn tập và thứ hạng tại bảng xếp hạng trong các cuộc thi từ đầu năm học để tuyển chọn các thành viên đội tuyển OLP Tin học UTC năm 2022.</li>
+                </ul>
+                <p><b>3. Kế hoạch tổ chức cuộc thi OLP Tin học cấp trường năm 2022</b></p>
+                <p><b>Đối tượng dự thi:</b></p>
+                <p>Toàn bộ các bạn sinh viên từ K63 đến K60 thuộc trường đại học Giao Thông Vận Tải có đam mê với lập trình.</p>
+                <p><b>Cuộc thi diễn ra với 2 vòng Online, 1 vòng Chung kết Offline</b></p>
+                <ul>
+                    <li>OLP Tin học cấp trường vòng thi Online thứ nhất 02/10/2022 từ 20h00 đến 22h00 diễn ra tại: <a href="">http://www.laptrinhonline.club/contest/olp20221</a></li>
+                    <li>OLP Tin học cấp trường vòng thi Online thứ hai: 09/10/2022 từ 20h00 đến 22h00 diễn ra tại: <a href="">http://www.laptrinhonline.club/contest/olp20222</a></li>
+                    <li>OLP Tin học cấp trường vòng Chung kết Offline: 06/11/2022 từ 7h20 đến 10h45 diễn ra tại: <a href="">http://www.laptrinhonline.club/contest/olp20223</a></li>
+                </ul>
+                <p><b>Tất cả thí sinh tham gia đầy đủ 3 vòng thi sẽ nhận được chứng nhận tham gia từ Khoa Công nghệ thông tin.</b></p>
+                <p><b>Hình thức thi</b></p>
+                <ul>
+                    <li>Thí sinh đăng ký tham cuộc thi tại: <a href="">https://docs.google.com/forms/d/e/1FAIpQLScHdlY6deeJ6ef_XJm7oOZhn5y2odIU_jA5b6oznFyiYa3uTQ/viewform</a></li>
+                    <li>Thời hạn đăng ký tham gia cuộc thi: 20h ngày 30/09/2022</li>
+                    <li>02 Vòng Online thí sinh chủ động tham gia thi trong thời gian quy định.</li>
+                    <li>Vòng Chung kết Offline thi tập trung tại Trường ĐH GTVT, phòng thi sẽ được thông báo sau.</li>
+                    <li>Thí sinh sử dụng tài khoản tự tạo để tiến hành đăng nhập dự thi.</li>
+                </ul>
+                <p>Khoa CNTT cùng BTC xin chân thành cảm ơn Tập đoàn Samsung SVMC, Tập đoàn FPT, Viện công nghệ và đào tạo DevMaster ,Công ty Amela Việt Nam và các anh chị Cựu OLP đã đồng hành và tài trợ cho chương trình này!</p>
+                <p>Mọi ý kiến thắc mắc vui lòng liên hệ với BTC hoặc qua các Fanpage chính thức của Khoa CNTT.</p>
+            </section>
+            <section class="sticky-post">
+                <h2>Cuộc thi lập trình chào mừng năm học mới 2022 - 2023</h2>
+                <p><i class="fa-solid fa-star"></i>Dinh_Tung đã đăng vào 20 tháng 8 năm 2022, 3:20 p.m. <i class="fa-solid fa-comments"></i> 0</p>
+                <p>Chi tiết xem tại: <a href=""> https://www.facebook.com/dhgtvtcaugiay/photos/a.162374107602555/1403859556787331/</a></p>
+                <img src="assets/Images/test5.jpg" alt="">
+            </section>
+        </div>
+        <div class="blog-sidebar">
+            <div class="blog-sidebox">
+                <h3>Cuộc thi đang diễn ra<i class="fa-solid fa-trophy"></i></h3>
+                <div class="sidebox-content">
+                    <div class="sidebox-contest">
+                        <a href="">Thực hành lần 1 CNTT1+2</a>
+                        <div class="countdown" id="countdown1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-sidebox">
+                <h3>Cuộc thi sắp tới<i class="fa-solid fa-trophy"></i></h3>
+                <div class="sidebox-content">
+                    <div class="sidebox-contest">
+                        <a href="">Marathon Coder 2023 - Vòng Loại 2 Tuần 1</a>
+                        <div class="countdown" id="countdown2"></div>
+                    </div>
+                    <div class="sidebox-contest">
+                        <a href="">Chiến thần thiết kế thuật toán vòng chung kết</a>
+                        <div class="countdown" id="countdown3"></div>
+                    </div>
+                    <div class="sidebox-contest">
+                        <a href="">Marathon Coder 2023 - Vòng Loại 1 Tuần 2</a>
+                        <div class="countdown" id="countdown4"></div>
+                    </div>
+                    <div class="sidebox-contest">
+                        <a href="">Marathon Coder 2023 - Vòng Loại 2 Tuần 2</a>
+                        <div class="countdown" id="countdown5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-sidebox">
+                <h3>Dòng bình luận<i class="fa-solid fa-comments"></i></h3>
+                <div class="sidebox-content">
+                    <div class="sidebox-comment">
+                        <a href="">huytapcode → So sánh chiều cao</a>
+                    </div>
+                    <div class="sidebox-comment">
+                        <a href="">VănHoàng_CNTT2_K64 → Viết số La Mã</a>
+                    </div>
+                    <div class="sidebox-comment">
+                        <a href="">nguyentrongha_K64_SFIT → Viết số La Mã</a>
+                    </div>
+                    <div class="sidebox-comment">
+                        <a href="">Tiểu_Cốt → Marathon Coder 2023</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    
+    <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+    <footer>
+        <div class="container">
+            <div class="contact-list">
+                <div class="footer__logo">
+                    <img src="./assets/Images/logo-ngang.png" alt="UTC" >
+                </div>
+                <!-- cSC -->
+                <ul class="contacts">
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-location-dot"></i> Địa chỉ: 3 Đ. Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-phone"></i> Điện thoại: (84.24) 37663311 - Fax: (84.24)37669613
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-envelope"></i> Email: dhgtvt@utc.edu.vn
+                    </a></li>
+
+                </ul>
+                <!-- PH -->
+                <br><br>
+                <div>
+                    <ul class="contacts">
+                        <h3>PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH</h3>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-location-dot"></i> 450-451 Đường Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh
+                        </a></li>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-phone"></i> Điện thoại: (84.28) 38966798 - Fax: (84.28)38964736
+                        </a></li>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-envelope"></i> Email: info@utc2.edu.vn
+                        </a></li>
+                        <br>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-globe"></i>Website:http://phanhieu.utc.edu.vn
+                        </a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+            <div class="facility-list">
+                <h3 class="title-2 footer__title">Cơ sở trực thuộc</h3>
+                <ul class="facilities">
+                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải</a> </li>
+                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
+                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải - Phân hiệu Hồ Chí Minh</a> </li>
+                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
+                </ul>
+            </div> 
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>University of Transport and Communications  © 2023.All Right Reserved.</p>
+                <ul class="socials">
+                    <li class="social"><a href="https://www.facebook.com/dhgtvtcaugiay"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="social"><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function countdownTimer(targetDate, countdownElementId) {
+          const targetTime = new Date(targetDate).getTime();
+          const countdownElement = document.getElementById(countdownElementId);
+    
+          const timer = setInterval(() => {
+            const currentTime = new Date().getTime();
+            const remainingTime = targetTime - currentTime;
+    
+            if (remainingTime <= 0) {
+              clearInterval(timer);
+              countdownElement.innerText = "Chúc mừng sinh nhật!";
+            } else {
+              const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+              const hours = Math.floor(
+                (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+              );
+              const minutes = Math.floor(
+                (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+              );
+              const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    
+              countdownElement.innerText = `${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`;
+            }
+          }, 1000);
+        }
+    
+        countdownTimer("2023-10-15", "countdown1");
+        countdownTimer("2023-11-01", "countdown2");
+        countdownTimer("2023-12-01", "countdown3");
+        countdownTimer("2023-10-31", "countdown4");
+        countdownTimer("2023-11-15", "countdown5");
+      </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/p4.js"></script>
+</body>
+</html>

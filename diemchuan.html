@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/Style/base.css">
+    <link rel="stylesheet" href="./assets/Style/main.css">
+    <link rel="stylesheet" href="./assets/Style/responsive.css">
+    <link rel="shortcut icon" href="./assets/Images/logo_mau.png">
+    <title>Điểm chuẩn 2023</title>
+</head>
+<body onload="init()">
+    <header>
+        <div class="header__logo">
+            <img src="./assets/Images/logo.png" alt="">
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="header__menu">
+            
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html" class="nav__item-link ">Trang chủ</a></li>
+                <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Khoa Ngành</a></li>
+                <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Thông tin tuyển sinh</a></li>
+                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link underline">Thông tin tham khảo</a></li>
+            </ul>
+        </div>
+        <div class="header__search">
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
+                <div class="search__icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ul class="suggestions">
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <h1 class="title-1" style="margin: 25px auto;">Điểm chuẩn 2023</h1>
+            <style>
+                table,th,td{
+                    text-align: center;
+                }
+                thead{
+                    background-color: #c2b650;
+                }
+                tbody tr:nth-child(even){
+                    background-color: #F9D5E5;
+                }
+                tbody tr:nth-child(odd){
+                    background-color:  #FCEADE;
+                }
+                td{
+                    font-family: 'Times New Roman', Times, serif;
+                }
+                table{
+                    border-collapse: collapse;
+                    margin: 30px 25px;
+                }
+                th, td {
+                    border: 1px solid black;
+                    padding: 8px;
+                }
+                .hidden-row,.hidden-row1{
+                    display: none;
+                }
+            </style>
+            <div>
+                <h2>I. Tuyển sinh và đào tạo tại Hà Nội - Mã tuyển sinh (GHA)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="3">STT</th>
+                            <th rowspan="3">Mã ngành <br> (Mã xét tuyển)</th>
+                            <th rowspan="3">Ngành xét tuyển</th>
+                            <th colspan="3">Xét tuyển bằng kết quả thi THPT</th>
+                            <th colspan="2">Xét tuyển bằng kết quả thi đánh giá tư duy</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Điểm trúng tuyển</th>
+                            <th colspan="2">Tiêu chí phụ <br> <i style="opacity: 0.8;font-size: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">(Chỉ áp dụng với thí sinh có Tổng điểm xét tuyển bằng điểm trúng tuyển)</i></th>
+                            <th rowspan="2">Điểm trúng tuyển</th>
+                            <th>Tiêu chí phụ <br><i style="opacity: 0.8;font-size: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">(Chỉ áp dụng với thí sinh có Tổng điểm xét tuyển bằng điểm trúng tuyển)</i></th>
+                        </tr>  
+                        <tr>
+                            <th>Điểm Toán</th>
+                            <th>Thứ tự nguyện vọng</th>
+                            <th>Thứ tự nguyện vọng</th>
+                        </tr>  
+                    </thead>
+                    <tbody>
+                       <!--1 --> 
+                       <tr>
+                            <td>1</td>
+                            <td>7310101</td>
+                            <td>Kinh tế</td>
+                            <td>24.96</td>
+                            <td>&ge; 8.6</td>
+                            <td>&le; 5</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>     
+                        <tr>
+                            <td>2</td>
+                            <td>7340101</td>
+                            <td>Quản trị kinh doanh</td>
+                            <td>24.77</td>
+                            <td>&ge; 7.4</td>
+                            <td>&le; 2</td>
+                            <td>50.49</td>
+                            <td>&le; 13</td>
+                        </tr>     
+                        <tr>
+                            <td>3</td>
+                            <td>7340101 QT</td>
+                            <td>Quản trị kinh doanh (Chương trình CLC Việt-Anh)</td>
+                            <td>23.85</td>
+                            <td>&ge; 7.6</td>
+                            <td>&le; 7</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>     
+                        <tr>
+                            <td>4</td>
+                            <td>7340201</td>
+                            <td>Tài chính ngân hàng</td>
+                            <td>25.1</td>
+                            <td>&ge; 7.6</td>
+                            <td>&le; 7</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>     
+                        <tr>
+                            <td>5</td>
+                            <td>7340301</td>
+                            <td>Kế toán</td>
+                            <td>24.77</td>
+                            <td>&ge; 7.8</td>
+                            <td>&le; 4</td>
+                            <td>50</td>
+                            <td>1</td>
+                        </tr>     
+                        <tr>
+                            <td>6</td>
+                            <td>7340301 QT</td>
+                            <td>Kế toán ( Chương trình CLC Kế toán tổng hợp Việt-Anh)</td>
+                            <td>23.48</td>
+                            <td>&ge; 6.6</td>
+                            <td>&le; 6</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>     
+                        <tr >
+                            <td>7</td>
+                            <td>740112</td>
+                            <td>Toán ứng dụng</td>
+                            <td>22.55</td>
+                            <td>&ge; 8.4</td>
+                            <td>&le; 4</td>
+                            <td>50.74</td>
+                            <td>&le; 3</td>
+                        </tr>     
+                        <tr >
+                            <td>8</td>
+                            <td>7480101</td>
+                            <td>Khoa học máy tính</td>
+                            <td>25.24</td>
+                            <td>&ge; 8.4</td>
+                            <td>1 </td>
+                            <td>55.53</td>
+                            <td>&le; 6</td>
+                        </tr>     
+                        <tr>
+                            <td>9</td>
+                            <td>7480201</td>
+                            <td>Công nghệ thông tin</td>
+                            <td>25.38</td>
+                            <td>&ge; 8.2</td>
+                            <td>1</td>
+                            <td>56.19</td>
+                            <td>&le; 5</td>
+                        </tr>     
+                        <tr >
+                            <td>10</td>
+                            <td>7480201 QT </td>
+                            <td>Công nghệ thông tin ( Chương trình CLC Công nghệ thông tin Việt-Anh)</td>
+                            <td>24.03</td>
+                            <td>&ge; 7.6</td>
+                            <td>&le; 3</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>     
+                        <tr >
+                            <td>11</td>
+                            <td>7510104</td>
+                            <td>Công nghệ kỹ thuật giao thông</td>
+                            <td>22.75</td>
+                            <td>&ge; 8.0</td>
+                            <td>&le; 4</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>     
+                        <tr>
+                            <td>12</td>
+                            <td>7510605</td>
+                            <td>Logistics và quản lý chuỗi cung ứng</td>
+                            <td>26.15</td>
+                            <td>&ge; 8.8</td>
+                            <td>1</td>
+                            <td>50.77</td>
+                            <td>&le; 4</td>
+                        </tr>     
+                        <tr>
+                            <td>13</td>
+                            <td>7520103</td>
+                            <td>Kỹ thuật cơ khí</td>
+                            <td>23.79</td>
+                            <td>&ge; 8.0</td>
+                            <td>&le; 5</td>
+                            <td>50.72</td>
+                            <td>&le; 8</td>
+                        </tr>     
+                        <tr>
+                            <td>14</td>
+                            <td>7520103 QT</td>
+                            <td>Kỹ thuật cơ khí ( Chương trình CLC Cơ khí ô tô Việt-Anh))</td>
+                            <td>22.45</td>
+                            <td>&ge; 7.2</td>
+                            <td>&le; 5</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>     
+                        <tr>
+                            <td>15</td>
+                            <td>7520114</td>
+                            <td>Kỹ thuật cơ điện tử</td>
+                            <td>24.87</td>
+                            <td>&ge; 7.6</td>
+                            <td>&le; 15</td>
+                            <td>50</td>
+                            <td>&le; 2</td>
+                        </tr>     
+                        <tr class="hidden-row">
+                            <td>16</td>
+                            <td>7520115</td>
+                            <td>Kỹ thuật nhiệt</td>
+                            <td>22.85</td>
+                            <td>&ge; 7.4</td>
+                            <td>1</td>
+                            <td>50</td>
+                            <td>1 </td>
+                        </tr>     
+                        <tr class="hidden-row">
+                            <td>17</td>
+                            <td>7520116</td>
+                            <td>Kỹ thuật cơ khí động lực</td>
+                            <td>22.85</td>
+                            <td>&ge; 7.4</td>
+                            <td>1</td>
+                            <td>50.4</td>
+                            <td>&le; 3</td>
+                        </tr>     
+                        <tr class="hidden-row">
+                            <td>18</td>
+                            <td>7520130</td>
+                            <td>Kỹ thuật ô tô</td>
+                            <td>24.87</td>
+                            <td>&ge; 8.0</td>
+                            <td>1</td>
+                            <td>50.72</td>
+                            <td>1</td>
+                        </tr>     
+                        <tr class="hidden-row">
+                            <td>19</td>
+                            <td>7520201</td>
+                            <td>Kỹ thuật điện</td>
+                            <td>23.72</td>
+                            <td>&ge; 8.0</td>
+                            <td>1</td>
+                            <td>50</td>
+                            <td>1</td>
+                        </tr>     
+                        <tr class="hidden-row">
+                            <td>20</td>
+                            <td>7520207</td>
+                            <td>Kỹ thuật điện tử - viễn thông</td>
+                            <td>24.26</td>
+                            <td>&ge; 7.6</td>
+                            <td>&le; 10</td>
+                            <td>55.41</td>
+                            <td>&le; 2</td>
+                        </tr>     
+                        <tr class="hidden-row">
+                            <td>21</td>
+                            <td>7520216</td>
+                            <td>Kỹ thuật điều khiển và tự động hóa</td>
+                            <td>25.19</td>
+                            <td>&ge; 7.6</td>
+                            <td>&le; 2</td>
+                            <td>51.8</td>
+                            <td>1</td>
+                        </tr>     
+                        <tr class="hidden-row">
+                            <td>22</td>
+                            <td>7520218</td>
+                            <td>Kỹ thuật robot và trí tuệ nhân tạo</td>
+                            <td>24.34</td>
+                            <td>&ge; 8.4</td>
+                            <td>1</td>
+                            <td>50.04</td>
+                            <td>&le; 7</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>23</td>
+                            <td>7520219</td>
+                            <td>Hệ thống giao thông thông minh</td>
+                            <td>21.45</td>
+                            <td>&ge; 8.2</td>
+                            <td>&le; 2</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>24</td>
+                            <td>7520320</td>
+                            <td>Kỹ thuật môi trường</td>
+                            <td>21.9</td>
+                            <td>&ge; 7.4</td>
+                            <td>&le; 5</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>25</td>
+                            <td>7580106</td>
+                            <td>Quản lý đô thị và công trình</td>
+                            <td>22.55</td>
+                            <td>&ge; 5.4</td>
+                            <td>&le; 2</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>26</td>
+                            <td>7580201</td>
+                            <td>Kỹ thuật xây dựng</td>
+                            <td>22.2</td>
+                            <td>&ge; 7.8</td>
+                            <td>&le; 2</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>27</td>
+                            <td>7580201 QT</td>
+                            <td>Kỹ thuật xây dựng (Chương trìnhtiên tiến Kỹ thuật xây dựng công trình giao thông)</td>
+                            <td>20.9</td>
+                            <td>&ge; 7.0</td>
+                            <td>1</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row">
+                            <td>28</td>
+                            <td>7580202</td>
+                            <td>Kỹ thuật xây dựng công trình thuỷ</td>
+                            <td>18.3</td>
+                            <td>&ge; 5.6</td>
+                            <td>&le; 4</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>29</td>
+                            <td>7580205</td>
+                            <td>Kỹ thuật xây dựng công trình giao thông</td>
+                            <td>19.25</td>
+                            <td>&ge; 7</td>
+                            <td>1 </td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>30</td>
+                            <td>7580205 QT</td>
+                            <td>Kỹ thuật xây dựng công trình giao thông (gồm các Chương trình chất lượng cao: Cầu-Đường bộ Việt-Pháp, Cầu Đường bộ Việt - Anh, Công trình giao thông đô thị Việt - Nhật)</td>
+                            <td>18.9</td>
+                            <td>&ge; 6.4</td>
+                            <td>1</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>31</td>
+                            <td>7580210 </td>
+                            <td>Kỹ thuật cơ sở hạ tầng</td>
+                            <td>21.6</td>
+                            <td>&ge; 7.4</td>
+                            <td>&le; 2</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>32</td>
+                            <td>7580301</td>
+                            <td>Kinh tế xây dựng </td>
+                            <td>23.98</td>
+                            <td>&ge; 8.0</td>
+                            <td>1</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>33</td>
+                            <td>7580301 QT</td>
+                            <td>Kinh tế xây dựng (Chương trình chất lượng cao Kinh tế xây dựng công trình giao thông Việt - Anh)</td>
+                            <td>22.7</td>
+                            <td>&ge; 7.2</td>
+                            <td>&le; 7</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>34</td>
+                            <td>7580302</td>
+                            <td>Quản lý xây dựng</td>
+                            <td>23.51</td>
+                            <td>&ge; 7.8</td>
+                            <td>1</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>35</td>
+                            <td>7580302 QT</td>
+                            <td>Quản lý xây dựng (Chương trình chất lượng cao Quản lý xây dựng Việt - Anh)</td>
+                            <td>20.5></td>
+                            <td>&ge; 7.6</td>
+                            <td>&le; 4</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>36</td>
+                            <td>7810103</td>
+                            <td>Quản trị dịch vụ du lịch và lữ hành</td>
+                            <td>23.8</td>
+                            <td>&ge; 7.8</td>
+                            <td>&le; 4</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>37</td>
+                            <td>7840101</td>
+                            <td>Khai thác vận tải</td>
+                            <td>24.4</td>
+                            <td>&ge; 8.4</td>
+                            <td>&le; 2</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                        <tr class="hidden-row1">
+                            <td>38</td>
+                            <td>7840104</td>
+                            <td>Kinh tế vận tải</td>
+                            <td>24.35</td>
+                            <td>&ge; 7.8</td>
+                            <td>1</td>
+                            <td>X</td>
+                            <td>X</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <div class="button-more"><p onclick="showHiddenRows()">Xem thêm</p></div> -->
+                <div class="button-more" onclick="showMore()"><p>Xem thêm</p></div>
+                <!-- <button id="more" onclick="showHiddenRows()">Xem thêm</button> -->
+            </div>
+
+            <div>
+                <h2>II. Đại học Giao thông Vận tải phân hiệu TP.HCM - Mã tuyển sinh (GSA)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">TT</th>
+                            <th rowspan="2">Mã ngành xét tuyển</th>
+                            <th rowspan="2">Ngành xét tuyển</th>
+                            <th rowspan="2">Tên phương thức xét tuyển</th>
+                            <th rowspan="2">Điểm trúng tuyển</th>
+                            <th colspan="2">Tiêu chí phụ <br> <i style="opacity: 0.8;font-size: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif;">(Chỉ áp dụng với thí sinh có Tổng điểm xét tuyển bằng điểm trúng tuyển)</i></th>
+                        </tr>
+                        <tr>
+                            <th>Điểm Toán</th>
+                            <th>Thứ tự nguyện vọng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>7340101</td>
+                            <td>Quản trị kinh doanh</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>23.09</td>
+                            <td>&ge; 6.6</td>
+                            <td>&le; 2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>7340201</td>
+                            <td>Tài chính ngân hàng</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>23.10</td>
+                            <td>&ge; 7.2</td>
+                            <td>&le; 6</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>7340301</td>
+                            <td>Kế toán</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>22.94</td>
+                            <td>&ge; 7.2</td>
+                            <td>&le; 6</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>7480201</td>
+                            <td>Công nghệ thông tin</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>24.54</td>
+                            <td>&ge; 7.2</td>
+                            <td>&le; 15</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>7510605</td>
+                            <td>Logistics và quản lý chuỗi cung ứng</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>24.83</td>
+                            <td>&ge; 7.0</td>
+                            <td>&le; 2</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7520114</td>
+                            <td>Kỹ thuật cơ điện tử</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>22.94</td>
+                            <td>&ge; 7.4</td>
+                            <td>&le; 11</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>7520116</td>
+                            <td>Kỹ thuật cơ khí động lực</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>21.5</td>
+                            <td>&ge;6.2 </td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>7520130</td>
+                            <td>Kỹ thuật ô tô</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>23.47</td>
+                            <td>&ge; 8.0</td>
+                            <td>&le; 4</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>7520201</td>
+                            <td>Kỹ thuật điện</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>22.15</td>
+                            <td>&ge; 7.4</td>
+                            <td>&le; 2</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>7520207</td>
+                            <td>Kỹ thuật điện tử - viễn thông </td>
+                            <td>Xét theo điểm thi</td>
+                            <td>22.00</td>
+                            <td>&ge; 6.6</td>
+                            <td>&le; 8</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>7520216</td>
+                            <td>Kỹ thuật điều khiển và tự động hoá </td>
+                            <td>Xét theo điểm thi</td>
+                            <td>23.25</td>
+                            <td>&ge; 8.0</td>
+                            <td>&le; 8</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>7580101</td>
+                            <td>Kiến trúc</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>21.25</td>
+                            <td>&ge; 6.8</td>
+                            <td>&le; 2</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>7580201</td>
+                            <td>Kỹ thuật xây dựng</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>19.55</td>
+                            <td>&ge; 5.4</td>
+                            <td>1 </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>7580205</td>
+                            <td>Kỹ thuật xây dựng công trình giao thông</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>16.15</td>
+                            <td>&ge; 5.4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>7580301</td>
+                            <td>Kinh tế xây dựng</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>21.00</td>
+                            <td>&ge;6.6 </td>
+                            <td>&le; 2</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>7580302</td>
+                            <td>Quản lý xây dựng</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>20.10</td>
+                            <td>&ge; 72</td>
+                            <td>&le; 6</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>7810103</td>
+                            <td>Quản trị dịch vụ du lịch và lữ hành </td>
+                            <td>Xét theo điểm thi</td>
+                            <td>21.70</td>
+                            <td>&ge; 7.0</td>
+                            <td>&le; 4</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>7840101</td>
+                            <td>Khai thác vận tải</td>
+                            <td>Xét theo điểm thi</td>
+                            <td>23.84</td>
+                            <td>&ge; 7.4</td>
+                            <td>&le; 4</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+    <footer>
+        <div class="container">
+            <div class="contact-list">
+                <div class="footer__logo">
+                    <img src="./assets/Images/logo-ngang.png" alt="UTC" >
+                </div>
+                <!-- cSC -->
+                <ul class="contacts">
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-location-dot"></i> Địa chỉ: 3 Đ. Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-phone"></i> Điện thoại: (84.24) 37663311 - Fax: (84.24)37669613
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-envelope"></i> Email: dhgtvt@utc.edu.vn
+                    </a></li>
+
+                </ul>
+                <!-- PH -->
+                <br><br>
+                <div>
+                    <ul class="contacts">
+                        <h3>PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH</h3>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-location-dot"></i> 450-451 Đường Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh
+                        </a></li>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-phone"></i> Điện thoại: (84.28) 38966798 - Fax: (84.28)38964736
+                        </a></li>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-envelope"></i> Email: info@utc2.edu.vn
+                        </a></li>
+                        <br>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-globe"></i>Website:http://phanhieu.utc.edu.vn
+                        </a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+            <div class="facility-list">
+                <h3 class="title-2 footer__title">Cơ sở trực thuộc</h3>
+                <ul class="facilities">
+                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải</a> </li>
+                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
+                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải - Phân hiệu Hồ Chí Minh</a> </li>
+                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
+                </ul>
+            </div> 
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>University of Transport and Communications  © 2023.All Right Reserved.</p>
+                <ul class="socials">
+                    <li class="social"><a href="https://www.facebook.com/dhgtvtcaugiay"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="social"><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/p4.js"></script>
+    <script>
+        // Hien xem Them
+var clickCount = 0;
+ function showMore() {
+    clickCount++;
+    if (clickCount % 2 === 1) {
+        showHiddenRow();
+    }
+    else{
+        showHiddenRows()
+    }
+}
+function showHiddenRow() {
+    var hiddenRows = document.getElementsByClassName('hidden-row');
+    for (var i = 0; i < hiddenRows.length; i++) {
+        hiddenRows[i].style.display = 'table-row';
+    }
+}
+
+ function showHiddenRows() {
+    var hiddenRow = document.getElementsByClassName('hidden-row1');
+    var hiddenBtn = document.getElementsByClassName('button-more');
+    for (var i = 0; i < hiddenRow.length; i++) {
+        hiddenRow[i].style.display = 'table-row';
+    }
+    for (var i = 0; i < hiddenBtn.length; i++) {
+        hiddenBtn[i].style.display = 'none';
+    }
+ }
+//
+    </script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học bổng - Học phí</title>
+    <meta http-equiv="refresh" content="1800"/>
+    <link rel="stylesheet" href="./assets/Style/base.css">
+    <link rel="stylesheet" href="./assets/Style/tuyendung.css">
+    <link rel="stylesheet" href="./assets/Style/main.css">
+    <link rel="stylesheet" href="./assets/Style/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="shortcut icon" href="./assets/Images/logo_mau.png"> 
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <img src="./assets/Images/logo.png" alt="">
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="header__menu">
+            
+            <ul class="nav__list">
+                <li class="nav__item"><a href="./index.html" class="nav__item-link">Trang chủ</a></li>
+                <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Khoa Ngành</a></li>
+                <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Thông tin tuyển sinh</a></li>
+                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link">Thông tin tham khảo</a></li>
+            </ul>
+        </div>
+        <div class="header__search">
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
+                <div class="search__icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <ul class="suggestions">
+                </ul>
+            </div>
+        </div>
+    </header>
+    <style>
+        @media (max-width : 739px){
+            .container{
+                display: block;
+            }
+            .content-web,.post-list{
+                width: 100%;
+            }
+        }
+        .container{
+            display: flex;
+        }
+        section{
+            margin: auto;
+            padding: 50px 30px;
+        }
+        .hocbong{
+            width: 70%;
+        }
+        #menu-icon-1 li{
+            display: inline-block;
+            float: right;
+            padding-right: 10px;
+            color: #534d4d;
+        }
+        .hocbong ul li i{
+            zoom: 150%;
+        }
+        #menu-khoa li{
+            list-style-type: disc;
+        }
+        #menu-khoa{
+            padding-left: 25px;
+        }
+        .hocbong h3{
+            padding: 30px 0;
+        }
+        #menu-icon-1 li:hover{
+            color: black;
+            cursor : pointer;
+        }
+        .fa-tags{
+            padding: 35px 0;
+        }
+        #menu-hb li,#menu-khoa li{
+            padding: 5px 0;
+            color: rgb(16, 4, 146);
+        }
+        .content-ds{
+            list-style-type: disc;
+            margin: 15px
+        }
+        #myElement {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: fixed;
+            z-index: 20;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        
+        h4 {
+            margin-top: 0;
+        }
+        form div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        i.fa-xmark:hover{
+            color: red;
+        }
+        i.fa-xmark {
+            color: rgb(2, 1, 1);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"],input[type="button"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #939e93;  
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px auto;
+        }
+        
+        input[type="submit"]:hover,input[type="button"]:hover {
+            background-color: #45a049;
+        }
+        .hoc-phi .fa-clock{
+            padding: 30px 0;
+        }
+        .hocbong h1{
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        .hoc-phi >p{
+            padding: 5px 15px 5px 0;
+        }
+    </style>
+
+    <section>
+        <div class="container">
+            <div class="hocbong">  
+                <h1>HỌC BỔNG</h1>
+                <p><i class="fa-regular fa-clock"></i>Thứ sáu - 07/10/2022 14:32</p>
+                <ul id="menu-icon-1">
+                    <li><a title="Lưu bài viết này"><i class="fa-solid fa-bookmark" onclick="window.save()"></i></a></li>
+                    <li><a title="In ra"><i class="fa-solid fa-print" onclick="window.print()"></i></a></li>
+                    <li><a title="Giới thiệu bài viết cho bạn bè"><i onclick="showElement()" class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+                <h3>Các thông tin về học bổng dành cho sinh viên Đại học Giao thông vận tải</h3>
+                <ul id="menu-hb">
+                    <li><a class="hb-hien">1. Học bổng khuyến khích học tập (KKHT)</a></li>
+                    <li><a class="hb-hien">2. Học bổng tài trợ</a></li>
+                    <li><a class="hb-hien">3. Học bổng trao đổi sinh viên quốc tế</a></li>
+                </ul>
+                <h3>Các thông tin về học bổng xem <a href="">TẠI ĐÂY</a></h3>
+                <h3>Một số thông tin về học bổng dành cho Tân sinh viên Đại học Giao thông vận tải</h3>
+                <ul id="menu-khoa">
+                    <li><a href="">Công nghệ thông tin</a></li>
+                    <li><a href="">Cơ khí</a></li>
+                    <li><a href="">Khoa Điện - Điện tử</a></li>
+                    <li><a href=""></a>Tự động hóa</li>
+                </ul>
+                <p><i class="fa-solid fa-tags"></i>: <a href="">học bổng</a>, <a href="">Học bổng khuyến khích học tập</a>, <a href="">Học bổng trao đổi</a>, <a href="">học bổng doanh nghiệp</a></p>
+                <h1>NHỮNG TIN CŨ HƠN</h1>
+                <h1 ><a ><i class="fa-solid fa-chevron-right"></i>HỌC PHÍ(31/01/2022)</a></h1>
+                <div class="hoc-phi">
+                    <p><i class="fa-regular fa-clock"></i>Thứ hai - 31/01/2022 09:03</p>
+                    <p><b>Lộ trình tăng học phí từ 2020 đến 2025: </b>mức tăng trung bình khoảng 8%/năm học và không vượt quá mức 10%/năm học đối với từng chương trình đang triển khai đào tạo để phù hợp lộ trình tính đúng, tính đủ chi phí đào tạo vào học phí đến năm 2025.</p>
+                    <p>Thông tin về học phí năm học 2022 - 2023 xem <a href="" style="font-weight: bold;color: skyblue;">TẠI ĐÂY</a></p>
+                    <p>Thông tin về mức học phí các chương trình đào tạo xem <a href="" style="font-weight: bold;color: skyblue;">TẠI ĐÂY</a></p>
+
+                </div>
+            </div>
+            <div class="post-list">
+                <div>
+                    <h2>BÀI VIẾT LIÊN QUAN</h2>
+                    <div class="post-item">
+                        <img src="assets/Images/relate1.jpg" alt="">
+                        <h3>Bandwidth là gì? Tất tần tật thông tin mà bạn cần biết về băng thông</h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
+                    </div>
+                    <div class="post-item">
+                        <img src="assets/Images/relate2.jpg" alt="" width="100%">
+                        <h3>Các kiểu dữ liệu trong Python gồm những gì? Các thành phần cơ bản trong Python bạn cần biết</h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
+                    </div>
+                    <div class="post-item">
+                        <img src="assets/Images/relate3.jpg" alt="">
+                        <h3>Coder là gì? Người Coder cần có những tố chất nào? </h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
+                    </div>
+                    <div class="post-item">
+                        <img src="assets/Images/relate4.jpg" alt="">
+                        <h3>Hibernate là gì? Tất tần tật kiến thức liên quan về Hibernate </h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
+                    </div>
+                </div>
+                <div class="register-form side-section">
+                    <h3 class="title-1 register-form__heading">CÂU HỎI TƯ VẤN</h3>
+                    <div class="register-form__input  form">
+                        <h1 class="title-2">Đăng kí nhận thông tin: </h1>
+                        <div class="register-form__input-item form-field">
+                            <input type="text" id="name" class="form-input" placeholder=" ">
+                            <label class="form-label" for="name">Họ tên</label>
+                        </div>
+                        <div class="register-form__input-item form-field">
+                            <input type="email" id="email" class="form-input" placeholder=" ">
+                            <label class="form-label" for="email">Email</label>
+                        </div>
+                        <div class="register-form__input-item form-field">
+                            <input type="number" id="phone" class="form-input" placeholder=" ">
+                            <label class="form-label" for="phone">Điện thoại</label>
+                        </div>
+    
+                        <div class="form-field">
+                            <select id="register-seclect" class="form-input">
+                                <option value="CQ-DT">Đại học Chính quy (Hệ đại trà) </option>
+                                <option value="CQ-CLC">Đại học Chính quy (Chất lượng cao)</option>
+                            </select>
+                            <label for="register-seclect" class="form-label">Hệ đào tạo</label>
+                        </div>
+    
+                        <div class="form-field">
+                            <textarea name="question" id="register-question" cols="30" rows="6" placeholder=" " class="form-input" ></textarea>
+                            <label for="register-question" class="form-label">Message</label>
+                        </div>
+                        <button class="primary submit">Gửi</button>
+                    </div>
+                    <div class="form-message-list">
+                        <div class="form-message">
+                            <div class="message-text">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+     <section>
+        <div class="modal" id="modal">
+            <div class="modal-container">
+                <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+                <div class="major-modal">
+                    <h3 class="title">Học bổng khuyến khích học tập (KKHT)</h3>
+                    <p class="content">
+                        <p>Năm học 2023-2024 Nhà trường dành khoảng 70 tỷ đồng làm quỹ học bổng KKHT cho những sinh viên có kết quả học tập và rèn luyện tốt. Học bổng KKHT được xét theo học kỳ và có 3 mức:</p>
+                        <ul class="content-ds">
+                            <li>Học bổng loại khá (loại C): Tương đương với mức học phí sinh viên phải đóng</li>
+                            <li>Học bổng loại giỏi (loại B): Bằng 1,15 lần học bổng loại khá.</li>
+                            <li>Học bổng loại suất sắc (loại A): Bằng 1,5 lần học bổng loại khá.</li>
+                        </ul>Điều kiện được xét, cấp học bổng KKHT:</p>
+                        <ul class="content-ds">
+                            <li>Học bổng loại khá: Sinh viên có kết quả học tập và rèn luyện đạt từ loại khá trở lên.</li>
+                            <li>Học bổng loại giỏi: Sinh viên có kết quả học tập và rèn luyện đạt từ loại giỏi trở lên.</li>
+                            <li>Học bổng loại xuất sắc: Sinh viên có kết quả học tập và rèn luyện đạt từ loại xuất sắc trở lên.</li>
+                        </ul>
+                        <p>Căn cứ vào kết quả học tập và rèn luyện Nhà trường sẽ tổ chức xét cấp học bổng cho sinh viên (sinh viên không cần phải đăng ký).</p>
+                        <p>Chi tiết Quy định về việc xét cấp học bổng KKHT (áp dụng từ năm học 2023-2024) sinh viên xem <a style="color: skyblue;font-weight: bold;">TẠI ĐÂY.</a></p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <article id="myElement">
+        <form action="">
+            <div style="display: flex;">
+                <h4>Giới thiệu bài viết cho bạn bè</h4>
+                <i onclick="hideElement()" class="fa-solid fa-xmark"></i>
+            </div>
+            <label for="email">E-mail người nhận*</label>
+            <input type="email" name="email" id="email">
+            <label for="name">Tên của bạn*</label>
+            <input type="text" name="name" id="name">
+            <input type="submit" value="Gửi">
+            <input type="button" value="Hủy bỏ" onclick="hideElement()">
+        </form>
+    </article>
+
+    <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
+    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
+    <footer>
+        <div class="container">
+            <div class="contact-list">
+                <div class="footer__logo">
+                    <img src="./assets/Images/logo-ngang.png" alt="UTC" >
+                </div>
+                <!-- cSC -->
+                <ul class="contacts">
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-location-dot"></i> Địa chỉ: 3 Đ. Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-phone"></i> Điện thoại: (84.24) 37663311 - Fax: (84.24)37669613
+                    </a></li>
+                    <li class="contact footer__item"><a href="#">
+                        <i class="fa-solid fa-envelope"></i> Email: dhgtvt@utc.edu.vn
+                    </a></li>
+
+                </ul>
+                <!-- PH -->
+                <br><br>
+                <div>
+                    <ul class="contacts">
+                        <h3>PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH</h3>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-location-dot"></i> 450-451 Đường Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh
+                        </a></li>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-phone"></i> Điện thoại: (84.28) 38966798 - Fax: (84.28)38964736
+                        </a></li>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-envelope"></i> Email: info@utc2.edu.vn
+                        </a></li>
+                        <br>
+                        <li class="contact footer__item"><a href="#">
+                            <i class="fa-solid fa-globe"></i>Website:http://phanhieu.utc.edu.vn
+                        </a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+            <div class="facility-list">
+                <h3 class="title-2 footer__title">Cơ sở trực thuộc</h3>
+                <ul class="facilities">
+                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải</a> </li>
+                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
+                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải - Phân hiệu Hồ Chí Minh</a> </li>
+                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
+                </ul>
+            </div> 
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>University of Transport and Communications  © 2023.All Right Reserved.</p>
+                <ul class="socials">
+                    <li class="social"><a href="https://www.facebook.com/dhgtvtcaugiay"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="social"><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+    //    function showHocphi(){
+    //         var showHocphi = document.getElementsByClassName('hoc-phi');
+    //         showHocphi.style.display = 'block';
+    //     }
+        function showElement(){
+            var showElements = document.getElementById('myElement');
+            showElements.style.display = 'block';
+        }
+        function hideElement() {
+            var hideElements = document.getElementById('myElement');
+            hideElements.style.display = 'none';
+        }
+      </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/p4.js"></script>
+</body>
+</html>
