@@ -117,23 +117,6 @@ button.to-top:hover {
 button.swipe-btn {
     display: none;
 }
-/* underline */
-
-.underline {
-    position: relative;
-    z-index: 1;
-}
-
-.underline::after {
-    content: "";
-    background-image: linear-gradient(to right, transparent, var(--main-yellow), transparent);
-    position: absolute;
-    bottom: 0px;
-    z-index: -1;
-    height: 4px;
-    width: 100%  !important;
-    display: block;
-}
 /* form */
 .form {
     margin-top: 12px;
