@@ -1,6 +1,18 @@
 window.onload = function(){
     const navItems = document.querySelectorAll(".nav-tool-item");
     const facultyItems = document.querySelectorAll(".faculty-list");
+
+    function changeProgram(n) {
+        for(let j=0; j < navItems.length; j++) {
+            navItems[j].classList.remove('current');
+            // facultyItems[j].style.display = 'none';
+        }
+        navItems[n-1].classList.add("current");      
+        // facultyItems[n-1].style.display = 'block';
+    }
+
+
+    //to top btn
     var toTopBtn = document.querySelector(".to-top");
     var chatBtn = document.querySelector("button.chat-btn");
 
@@ -48,11 +60,10 @@ window.onload = function(){
         }
     }
     // modal
-    var majorItems = document.querySelectorAll(".major-item");
     var modal = document.getElementById("modal");
     var closeModal = document.querySelector(".close-modal");
 
-    for(let i of majorItems) {
+    for(let i of facultyItem) {
         i.onclick = function() {
             modal.style = "display: flex;"
         }
@@ -124,12 +135,15 @@ window.onload = function(){
         
 }
 // navigation
+
 const navItems = document.querySelectorAll(".nav-tool-item");
-        const facultyItems = document.querySelectorAll(".faculty-list");
+const facultyItems = document.querySelectorAll(".faculty-list");
 
         function changeProgram(n) {
             for(let j=0; j < navItems.length; j++) {
+                navItems[j].classList.remove('current');
                 facultyItems[j].style.display = 'none';
             }
+            navItems[n-1].classList.add("current");      
             facultyItems[n-1].style.display = 'block';
-        }
+        }``

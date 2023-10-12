@@ -1,9 +1,9 @@
 /* variable */
 :root {
-    --main-bg: #FF6E31;
+    --main-bg: #d67d07;
     --second-bg: #e8f0fe;
     --text-color: #06283D;
-    --main-yellow: #e8aa42;
+    --main-yellow: #4437f0;
 }
 /* reset css */
 *{
@@ -128,6 +128,9 @@ header {
     font-size: 2rem;
     position: relative;
     z-index: 1;
+}
+.nav__item:hover{
+    transform: scale(1.1);
 }
 .search {
     border-radius: 8px;
