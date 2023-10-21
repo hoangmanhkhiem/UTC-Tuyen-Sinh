@@ -1,9 +1,11 @@
 /* variable */
 :root {
-    --main-bg: #5c8fe8;
-    --second-bg: #e8f0fe;
-    --text-color: #06283D;
-    --main-yellow: #4437f0;
+    :root {
+        --main-bg: #00377a;
+        --second-bg: #e8f0fe;
+        --text-color: #06283D;
+        --main-yellow: #4437f0;
+    }
 }
 /* reset css */
 *{

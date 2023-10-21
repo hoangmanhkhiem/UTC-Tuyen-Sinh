@@ -1,0 +1,586 @@
+:root {
+    --main-bg: #00377a;
+    --second-bg: #1D376C;
+    --text-color: #06283D;
+    --form--bg: #e8f0fe;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Cuộn mượt hơn */
+    color: #ffff;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+html, body {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+}
+
+div {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+p{
+    font-size: 15px;
+}
+li {
+    list-style: none;
+}
+/* header */
+header {
+    background-color: var(--main-bg);
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    padding: 15px 32px;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    z-index: 999;
+}
+
+header a {
+    font-weight: 600;
+}
+
+.header-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-img img {
+    max-width: 500px;
+    position: relative;
+    top: -6px;
+}
+
+.header-list {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-list a{
+    font-size: 20px;
+    padding: 0px 8px;
+}
+
+.header-bars {
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+.header-bars:hover {
+    cursor: pointer;
+}
+
+.header-search {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.header-search input {
+    border-radius: 8px 0 0 8px;
+    position: relative;
+    width: 240px;
+    padding: 6px 20px;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    z-index: 999;
+    color: black;
+}
+
+.header-search input[type="text"] {
+    font-size: 12px;
+    padding: 1px 20px;
+    color: black;
+}
+
+.header-search__icon {
+    background-color: #012750   ;
+    padding: 1px 16px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+.header-search__icon:hover{
+    opacity: 0.4;
+}
+
+.open-it {
+    opacity: 0.6;
+}
+
+.header-list a:hover{
+    opacity: 0.6;
+}
+
+.header-list-down {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    flex-direction: column;
+    background-color: #8cbbd4;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-top: 50px;
+    z-index: 999;
+}
+
+.header-list-down a{
+    display: block;
+    text-align: center;
+    margin: 20px;
+    padding: 20px 30px;
+    width: 200px;
+    background-color: var(--main-bg);
+    border-radius: 20px;
+    align-items: center;
+}
+
+.header-list-down a:hover {
+    opacity: 0.6;
+}
+/* footer */
+footer {
+    background-color: var(--main-bg);
+    padding: 15px 42px;
+    overflow: hidden;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.contact__it1 {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    
+    padding: 10px 0;
+}
+.contact__it2 {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+   
+    padding: 10px 0;
+}
+.contact__it3 {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    padding-bottom: 50px;
+}
+.hn {
+    flex: 3;
+}
+.map-hn {
+    padding-left: 80px;
+    flex: 2;
+}
+.hcm {
+    flex: 3;
+}
+.map-hcm {
+    padding-left: 80px;
+    flex: 2;
+}
+.contact p a {
+    font-size: 14px;
+}
+.contact h6 {
+    font-size: 16px;
+}
+.apputc {
+    flex: 3;
+}
+.fl-utc {
+    padding-left: 80px;
+    flex: 2;
+}
+.fa-solid {
+    padding-right: 10px;
+}
+/*form cau hoi tuyen sinh */
+.form {
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+}
+.form h1 {
+    color: black;
+    text-align: center;
+}
+
+form {
+    background-color: var(--form--bg);
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+.form__name, .form__mail, .form__phone, .form__training, .form__message {
+    padding-top: 22px;
+    position: relative;
+}
+
+.form-input {
+    border-radius: 4px;
+    border: 3px solid black;
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    transition: all 0.25s ease;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    position: relative;
+}
+.form-input-hdt {
+    border-radius: 4px;
+    border: 3px solid black;
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    background-color: var(--form--bg);
+    color: black;
+}
+
+.form-label {
+    position: absolute;
+    top: 43px;
+    left: 21px;
+    color: #999;
+    transition: 0.25s ease;
+    padding: 0px 12px;
+}
+
+.form-label-hdt {
+    color: var(--main-bg);
+    position: absolute;
+    left: 21px;
+    top: 0%;
+    background: var(--form--bg);
+    padding: 0px 12px;
+}
+
+/* .form-label-mes {
+    position: absolute;
+    color: #999;
+    left: 21px;
+    top: 10%;
+    transform: translateY(-10%);
+    padding: 0px 12px; 
+} */
+
+/* .form-input:focus, 
+.form-label-mes:focus,
+.form-input:focus + .form-label {
+    border-color: var(--main-bg);
+    color: var(--main-bg);
+    background-color: var(--form--bg);
+} 
+.form-input:focus + .form-label,
+.form-input:focus + .form-label-mes {
+    top: 0%;
+    transform: translateY(0%);
+    color: var(--main-bg);
+    transition: 0.25s ease;
+    left: 21px;
+    background-color: var(--form--bg);
+} */
+
+.form button {
+    padding: 10px 30px;
+    background-color: var(--main-bg);
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+    display: block;
+    margin-left: auto;
+}
+
+.form button:hover {
+    opacity: 0.6;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+} 
+/* tắt mũi tên của input[type='number'] */
+.notification {
+    display: block;
+    width: 320px;
+    height: 100px;
+    border-radius: 16px;
+    position: fixed;
+    top: 120px;
+    opacity: 0.7;
+    right: -320px;
+    transition: 2s ease-in-out; 
+}
+.success-notification {
+    background-color: #4CAF50; /* Màu xanh là thông báo thành công */
+}
+
+.error-notification {
+    background-color: #f44336; /* Màu đỏ là thông báo thất bại */
+}
+.notification.show_mess {
+    display: block;
+    top: 120px;
+
+    right: 10px; 
+
+    transition: 1s ease-in-out; 
+    z-index: 9999;
+}
+.icon_notification, .mess-text {
+    display: inline-block;
+    height: 100%;
+}
+.mess-text h3{
+    padding-top: 20px;
+}
+.icon_notification {
+    padding-left: 10px;
+    transform: translateY(-15px);
+}
+
+/* bution top */
+.btn-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+}
+
+.btn-top:hover {
+    cursor: pointer;
+}
+.p1 {
+    width: 100%;
+    height: 100%;
+}
+.p1__img {
+    display: block;
+    overflow: hidden;
+}
+.p1__img img{
+    width: 100%;
+    height: 100%;
+}
+.p1__welcome {
+    background-color: #e8f0fe;
+    text-align: center;
+}
+
+.p1__welcome h1 {
+    color: #e8aa42;
+    font-size: 30px;
+    font-weight: 800;
+}
+.p2 {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 40px;
+}
+.p2__inspired-text {
+    background-color: #2555aa;
+    flex: 6;
+    padding: 120px 60px;
+}
+
+.p2__inspired-text p {
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+    padding-bottom: 50px;
+}
+.p2__form {
+    flex: 4;
+}
+
+.pt-tuyensinh {
+    background-color: #e8f0fe;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.pt-tuyensinh h3,
+.pt-tuyensinh p,
+.pt-tuyensinh a {
+    color: var(--second-bg);
+}
+.pt-tuyensinh__nd__title {
+    font-size: 32px;
+    font-weight: 800;
+    padding: 40px 35px 30px 35px;
+}
+.pt-tuyensinh__nd__list {
+    font-size: 20px;
+    padding-left: 35px;
+    font-weight: 600;
+}
+.pt-tuyensinh__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.pt-tuyensinh__list-item {
+    width: 18.5%;
+    min-height: 540px;
+    padding: 20px 30px;
+    margin-right: 10px;
+    background-color: #ffff;
+    position: relative;
+}
+.method-item__title {
+    padding-bottom: 20px;
+}
+.method-item__summary {
+    padding-bottom: 60px;
+}
+.method-item__title a {
+    font-size: 18px;
+    font-weight: 600;
+}
+.method-item__summary {
+    font-size: 16px;
+}
+.medthod-link-p {       
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 155px;
+    height: 40px;
+
+    border: var(--second-bg) solid 2px;
+    text-align: center;
+}
+.medthod-link {
+    font-size: 12px;
+}
+.medthod-link-p a {
+    cursor: pointer;
+}
+.medthod-link-p:hover {
+    opacity: 0.4;
+}
+.p3 {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px;
+    background-color: #e8f0fe;
+   
+}
+.p3-it {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+.p3-it__mid {
+    flex-direction: row-reverse;
+}
+.p3__tittle,
+.p3__img {
+    flex: 1;
+    padding: 10px;
+}
+.p3__tittle h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--second-bg);
+    padding-bottom: 20px;
+}
+.p3__tittle p {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+.p3__img img {
+    width: 100%;
+    height: auto;
+}
+.p4 {
+    background-color: #e8f0fe;
+}
+.p4-it {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p4-it__nd {
+    background-color: #e8f0fe;
+    flex: 1;
+    padding: 40px 80px;
+    text-align: center;
+}
+ h1 {
+    color: black;
+    font-size: 38px;
+    font-weight: 800;
+}
+.p4-it__solieu {
+    flex: 1;
+    padding: 40px 50px;
+    width: 50%;
+}
+.p4-it__solieu p {
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+.p4-it__solieu-1 {
+    margin-bottom: 30px;
+}
+.p4-it__solieu-2,
+.p4-it__solieu-1 {
+    background-color: #ffff;
+    border-radius: 16px;
+    text-align: center;
+    padding: 40px;
+}
+.p4-it__2 {
+    flex-direction: row-reverse;
+}
+p span {
+    color: red; 
+    font-size: 20px; 
+    font-weight: 500;
+}
