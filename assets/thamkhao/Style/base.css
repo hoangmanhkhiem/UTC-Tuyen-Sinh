@@ -64,23 +64,6 @@ button:hover {
     box-shadow: 3px 4px 12px #ccc;  
 }
 
-/* underline */
-
-.underline {
-    position: relative;
-    z-index: 1;
-}
-
-.underline::after {
-    content: "";
-    background-image: linear-gradient(to right, transparent, var(--main-yellow), transparent);
-    position: absolute;
-    bottom: 0px;
-    z-index: -1;
-    height: 4px;
-    width: 100%  !important;
-    display: block;
-}
 /* form */
 .form {
     margin-top: 12px;
@@ -338,32 +321,6 @@ form {
     background: var(--form--bg);
     padding: 0px 12px;
 }
-
-/* .form-label-mes {
-    position: absolute;
-    color: #999;
-    left: 21px;
-    top: 10%;
-    transform: translateY(-10%);
-    padding: 0px 12px; 
-} */
-
-/* .form-input:focus, 
-.form-label-mes:focus,
-.form-input:focus + .form-label {
-    border-color: var(--main-bg);
-    color: var(--main-bg);
-    background-color: var(--form--bg);
-} 
-.form-input:focus + .form-label,
-.form-input:focus + .form-label-mes {
-    top: 0%;
-    transform: translateY(0%);
-    color: var(--main-bg);
-    transition: 0.25s ease;
-    left: 21px;
-    background-color: var(--form--bg);
-} */
 
 .form button {
     padding: 10px 30px;
