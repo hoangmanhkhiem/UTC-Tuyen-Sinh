@@ -18,29 +18,52 @@
 </head>
 <body>
     <header>
-        <div class="header__logo">
-            <img src="./assets/thamkhao/Images/logo.png" alt="">
+        <div class="header-img">
+            <img src="assets/thamkhao/Images/logo-utc.png" alt="logo-utc">
         </div>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars"></i>
+        <div class="header-bars">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+            <!-- <i class="fa-solid fa-xmark fa-2xl"></i> -->
         </div>
-        <div class="header__menu">
-            
-            <ul class="nav__list">
-                <li class="nav__item"><a href="./index.html" class="nav__item-link">Trang chủ</a></li>
-                <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Khoa Ngành</a></li>
-                <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Thông tin tuyển sinh</a></li>
-                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link">Thông tin tham khảo</a></li>
-            </ul>
+        <div class="header-list">
+            <a href="index.html" class="header-bars__trangchu">Trang chủ</a>
+            <a href="tuyensinh.html" class="header-bars__nghanhhoc open-it">Tuyển Sinh</a>
+            <a href="bomon.html" class="header-bars__tuyensinh">Bộ Môn</a>
+            <a href="daotao.html" class="header-bars__thamkhao">Tham Khảo</a>
         </div>
-        <div class="header__search">
-            <div class="search">
-                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
-                <div class="search__icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+
+        <div class="list-notification">
+            <div class="notification success-notification" id="success">
+                <div class="icon_notification">
+                    <i class="fa-solid fa-circle-check"></i>
                 </div>
-                <ul class="suggestions">
-                </ul>
+                <div class="mess-text">
+                    <h3>Thành công</h3> 
+                    <p>Bạn đã đăng kí nhận tư vấn thành công</p>
+                </div>
+            </div>
+            <div class="notification error-notification" id="error">
+                <div class="icon_notification">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="mess-text">
+                    <h3>Lỗi</h3> 
+                    <p>Vui lòng nhập lại dữ liệu</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-list-down">
+            <a href="index.html" class="header-bars__trangchu">Trang chủ</a>
+            <a href="tuyensinh.html" class="header-bars__nghanhhoc open-it">Tuyển Sinh</a>
+            <a href="bomon.html" class="header-bars__tuyensinh">Bộ Môn</a>
+            <a href="daotao.html" class="header-bars__thamkhao">Tham Khảo</a>
+        </div>
+        <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm ...">
+            <div class="header-search__icon">
+                <i class="fa-solid fa-magnifying-glass fa-sm"></i>
             </div>
         </div>
     </header>
@@ -53,14 +76,52 @@
                 width: 100%;
             }
         }
-        .container{
+        /* .container{
             display: flex;
-        }
+        } */
         section{
             margin: auto;
             padding: 50px 30px;
         }
-        
+        a:hover{
+            color: skyblue;
+            cursor: pointer;
+        }
+        .header-web{
+            max-width: 100%;
+        }
+        #menu{
+            border: solid 1px black;
+            width: 200px;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 15px;
+        }
+        #menu >div{
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+        #menu p{
+            padding-left: 10px;
+        }
+        .content-web{
+            width: 70%;
+            padding: 0 20px;
+        }
+        .post-item,.menu-web{
+            padding: 25px 0;
+        }
+        .menu-web img,.header-web img,.post-list img{
+            max-width: 100%;
+            border-radius: 15px;
+        }
+        #menu ul li{
+            padding: 5px;
+        }
+        .menu-web h2,.menu-web p{
+            padding: 15px 0;
+        }
     </style>
 
     <section>
@@ -74,21 +135,20 @@
                             <i class="fa-solid fa-bars"></i>
                             <p>Mục Lục</p>
                         </div>
-                        <div >
+                        <div class="menu_ds_web">
                             <ul>
-                                <li><a href="">1.Laptrinhonline.club</a></li>
-                                <li><a href="">2.Treehouse</a></li>
-                                <li><a href="">3.edX</a></li>
-                                <li><a href="">4.GitHub</a></li>
-                                <li><a href="">5.The Code Player</a></li>
-                                <li><a href="">6.Codewars</a></li>
+                                <li><a href="#Laptrinhonline">1.Laptrinhonline.club</a></li>
+                                <li><a href="#Treehouse">2.Treehouse</a></li>
+                                <li><a href="#edX">3.edX</a></li>
+                                <li><a href="#GitHub">4.GitHub</a></li>
+                                <li><a href="#CodePlayer">5.The Code Player</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="menu-list">
-                    <div class="menu-web">
-                        <h2>Laptrinhonline.club</h2>
+                    <div class="menu-web" id="Laptrinhonline">
+                        <h2><a>Laptrinhonline.club</a></h2>
                         <p>🌟 Chào mừng bạn đến với trang web ôn luyện thuật toán dành cho sinh viên UTC! 🌟</p>
                         <p>📚 Trang web này đã được tạo ra với mục tiêu giúp đỡ sinh viên UTC nâng cao khả năng giải quyết vấn đề và ôn luyện kỹ năng thuật toán. Tại đây, bạn sẽ tìm thấy một loạt các bài tập và đề thi thuật toán được tổ chức một cách cơ cấu và có giải thích chi tiết.</p>
                         <p>💪 Với sự tổ chức hệ thống câu hỏi theo cấp độ từ dễ đến khó, bạn có thể tùy chọn ôn luyện từng giai đoạn và dần tăng cường khả năng giải quyết thuật toán của mình. Bạn sẽ gặp phải các bài toán thú vị thuộc nhiều lĩnh vực khác nhau như tìm kiếm, sắp xếp, đồ thị, đệ quy, và nhiều hơn nữa.</p>
@@ -102,25 +162,25 @@
                         <p>🔗 Hãy tham gia ngay và cùng nhau chinh phục những thử thách thuật toán đầy hứa hẹn và giành lấy những giải thưởng quý giá với trang web của chúng tôi! 🚀💪🏆 Ngoài những bài tập và tài liệu học tập hữu ích, trang web còn tổ chức các cuộc thi thuật toán hấp dẫn với nhiều giải thưởng đặc biệt! 🌟</p>
                         <img src="assets/thamkhao/Images/web1.png" alt="">
                     </div>
-                    <div class="menu-web">
-                        <h2>Treehouse</h2>
+                    <div class="menu-web" id="Treehouse">
+                        <h2><a>Treehouse</a></h2>
                         <p>Treehouse là một nền tảng giảng dạy công nghệ thông tin trực tuyến cung cấp một loạt các khóa học và hướng dẫn vào thiết kế và phát triển web, lập trình. Với nhiều tài nguyên đa phương tiện như video, bài kiểm tra và thử thách lập trình, học viên sẽ có được một nền tảng học tập bài bản và chuyên sâu. Các khóa học tại Treehouse được thiết kế đơn giản và dễ hiểu, giúp dễ dàng tiếp cận với người học ở mọi cấp độ, từ người mới bắt đầu đến người dùng nâng cao. Tuy nhiên, học viên cần trả một khoản phí nho nhỏ để học tập, cụ thể là 25$/ tháng cho gói cơ bản và 49$/tháng cho gói nâng cao.</p>
                         <img src="assets/thamkhao/Images/web2.jpg" alt="">
                         <p>Nền tảng cũng có một cộng đồng học viên và giảng viên đông đảo và lớn mạnh, cung cấp hỗ trợ và phản hồi cho nhau thông qua các diễn đàn trực tuyến. Một trong những tính năng độc đáo của Treehouse là học viên sẽ được thực hành với những câu hỏi, bài code trực tiếp, sát với các dự án thực tế. Điều này đảm bảo tính thực tế cũng như giúp cho học viên theo kịp với bài giảng. Nền tảng cũng cung cấp chứng chỉ cho người học, điều này sẽ giúp ghi điểm trong mắt nhà tuyển dụng.</p>
                     </div>
-                    <div class="menu-web">
-                        <h2>edX</h2>
+                    <div class="menu-web" id="edX">
+                        <h2><a>edX</a></h2>
                         <p>edX là trang web cung cấp các khóa học online hàng đầu thế giới, cung cấp một loạt các khóa học từ các trường đại học hàng đầu như Đại học Harvard, Massachusetts Institute of Technology và Stanford University. Bạn có thể tìm thấy nhiều khóa học khác nhau trên trang web này, đặc biệt là các khóa học về công nghệ thông tin và lập trình. Các khóa học này được giảng dạy bởi các giảng viên có nhiều năm kinh nghiệm trong lĩnh vực công nghệ thông tin, đảm bảo rằng học viên sẽ học được kiến thức chính xác và hữu ích. Ngoài ra, edX còn cung cấp các tài liệu học tập, bài kiểm tra và có cộng đồng thảo luận trực tuyến đông đảo giúp bạn tìm hiểu và nắm bắt tốt hơn về tưng lĩnh vực công nghệ mà bạn quan tâm.</p>
                         <img src="assets/thamkhao/Images/web3.jpg" alt="">
                     </div>
-                    <div class="menu-web">
-                        <h2>GitHub</h2>
+                    <div class="menu-web" id="GitHub">
+                        <h2><a>GitHub</a></h2>
                         GitHub là một nền tảng lưu trữ mã nguồn phổ biến cho phép các nhà phát triển chia sẻ, cộng tác các dự án phần mềm. Nếu bạn là một nhà phát triển mới, bạn có thể tham khảo rất nhiều tài liệu và mã nguồn mẫu trên trang web này giúp cho quá trình học lập trình. Ngoài ra, bạn cũng có thể tạo ra các dự án của riêng mình và mời các nhà phát triển khác tham gia cộng tác để phát triển ứng dụng. Bằng cách sử dụng GitHub, bạn có thể trao đổi thông tin với các nhà phát triển khác và cùng nhau tạo ra các giải pháp phần mềm thông qua việc cộng tác và chia sẻ kiến thức với nhau.
                         <p>Bên cạnh đó, bạn có thể tận dụng các tính năng của GitHub để quản lý các dự án phần mềm của mình, đặc biệt là khi bạn đang làm việc trong một nhóm lớn với nhiều thành viên. Vì vậy, nếu bạn muốn học lập trình và cộng tác trong các dự án phần mềm thì GitHub là một nền tảng tuyệt vời để bắt đầu.</p>
                         <img src="assets/thamkhao/Images/web6.jpg" alt="">
                     </div>
-                    <div class="menu-web">
-                        <h2>The Code Player</h2>
+                    <div class="menu-web" id="CodePlayer">
+                        <h2><a>The Code Player</a></h2>
                         <p>The Code Player là một trang web học online tuyệt vời cho những người muốn học lập trình front-end, đặc biệt là những người mới bắt đầu học với ngôn ngữ HTML, CSS và JavaScript. Trang web này không chỉ cung cấp các video hướng dẫn về việc viết code mà còn giúp bạn hiểu rõ hơn về cách thức hoạt động. Ngoài ra, tại đây bạn  có thể học cách xây dựng các trang web đẹp và chuyên nghiệp với CSS và thêm các tính năng tương tác với JavaScript. Hơn nữa, trang web còn cung cấp nhiều dự án và bài tập để bạn có thể áp dụng những kiến thức mình đã học vào thực tế. Đừng quên, học lập trình là một quá trình liên tục và The Code Player sẽ là một người bạn đồng hành đáng tin cậy của bạn trên con đường học tập.</p>
                         <img src="assets/thamkhao/Images/web7.jpg" alt="">
                     </div>
@@ -131,23 +191,23 @@
                     <h2>BÀI VIẾT LIÊN QUAN</h2>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate1.jpg" alt="">
-                        <h3>Bandwidth là gì? Tất tần tật thông tin mà bạn cần biết về băng thông</h3>
-                        <i class="fa-regular fa-clock"> 30/1/2023</i>
+                        <h3>Lễ trao học bổng GSS cho sinh viên</h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate2.jpg" alt="" width="100%">
-                        <h3>Các kiểu dữ liệu trong Python gồm những gì? Các thành phần cơ bản trong Python bạn cần biết</h3>
-                        <i class="fa-regular fa-clock"> 30/1/2023</i>
+                        <h3>Lễ trao học bổng Daeyoun</h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate3.jpg" alt="">
-                        <h3>Coder là gì? Người Coder cần có những tố chất nào? </h3>
-                        <i class="fa-regular fa-clock"> 30/1/2023</i>
+                        <h3>Lễ trao học bổng Kawakin năm học 2019 – 2020 </h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate4.jpg" alt="">
-                        <h3>Hibernate là gì? Tất tần tật kiến thức liên quan về Hibernate </h3>
-                        <i class="fa-regular fa-clock"> 30/1/2023</i>
+                        <h3>Lễ kỷ niệm 10 năm Học bổng đăng kiểm Việt Nam</h3>
+                        <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                 </div>
                 <div class="register-form side-section">
@@ -169,8 +229,9 @@
     
                         <div class="form-field">
                             <select id="register-seclect" class="form-input">
-                                <option value="CQ-DT">Đại học Chính quy (Hệ đại trà) </option>
-                                <option value="CQ-CLC">Đại học Chính quy (Chất lượng cao)</option>
+                                <option value="CQ-DT">Công nghệ thông tin (Chất lượng cao)</option>
+                                <option value="CQ-CLC">Công nghệ thông tin</option>
+                                <option value="CQ-DT">Khao học máy tính</option>
                             </select>
                             <label for="register-seclect" class="form-label">Hệ đào tạo</label>
                         </div>
@@ -193,72 +254,60 @@
         </div>
 
     </section>
-
-    <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
-    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
     <footer>
-        <div class="container"> 
-            <div class="contact-list">
-                <div class="footer__logo">
-                    <img src="./assets/thamkhao/Images/logo-ngang.png" alt="UTC" >
+        <img src="assets/thamkhao/Images/logofooter-gtvt.png" alt="logo-utc">
+        <div class="contact">
+            <div class="contact__it1">
+                <div class="hn">
+                    <p><i class="fa-solid fa-location-dot fa-sm"></i>Địa chỉ: Số 3 phố Cầu Giấy, P.Láng Thượng, Q.Đống Đa, Hà Nội.</p>
+                    <p><i class="fa-solid fa-phone fa-sm"></i>Điện thoại: <a href="tel:(84.24) 37663311" style="color:#fff">84.24 37663311</a> - Fax: 84.24 37669613</p>
+                    <p><i class="fa-solid fa-envelope fa-sm"></i>Email: <a href="mailto:dhgtvt@utc.edu.vn" style="color:#fff">dhgtvt@utc.edu.vn</a></p>
                 </div>
-                <!-- cSC -->
-                <ul class="contacts">
-                    <li class="contact footer__item"><a href="#">
-                        <i class="fa-solid fa-location-dot"></i> Địa chỉ: 3 Đ. Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội
-                    </a></li>
-                    <li class="contact footer__item"><a href="#">
-                        <i class="fa-solid fa-phone"></i> Điện thoại: (84.24) 37663311 - Fax: (84.24)37669613
-                    </a></li>
-                    <li class="contact footer__item"><a href="#">
-                        <i class="fa-solid fa-envelope"></i> Email: dhgtvt@utc.edu.vn
-                    </a></li>
-
-                </ul>
-                <!-- PH -->
-                <br><br>
-                <div>
-                    <ul class="contacts">
-                        <h3>PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH</h3>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-location-dot"></i> 450-451 Đường Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh
-                        </a></li>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-phone"></i> Điện thoại: (84.28) 38966798 - Fax: (84.28)38964736
-                        </a></li>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-envelope"></i> Email: info@utc2.edu.vn
-                        </a></li>
-                        <br>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-globe"></i>Website:http://phanhieu.utc.edu.vn
-                        </a></li>
-                    </ul>
+                <div class="map-hn">
+                    <h6>Trường Đại học Giao thông vận tải</h6>
+                    <iframe allowfullscreen="" height="120" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
                 </div>
-
-                
             </div>
-            <div class="facility-list">
-                <h3 class="title-2 footer__title">Cơ sở trực thuộc</h3>
-                <ul class="facilities">
-                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải</a> </li>
-                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
-                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải - Phân hiệu Hồ Chí Minh</a> </li>
-                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
-                </ul>
-            </div> 
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <p>University of Transport and Communications  © 2023.All Right Reserved.</p>
-                <ul class="socials">
-                    <li class="social"><a href="https://www.facebook.com/dhgtvtcaugiay"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li class="social"><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
-                </ul>
+            <div class="contact__it2">
+                <div class="hcm">
+                    <h6>PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH</h6>
+                    <p><i class="fa-solid fa-location-dot fa-sm"></i>Địa chỉ: 450-451 Đường Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh</p>
+                    <p><i class="fa-solid fa-phone fa-sm"></i>Điện thoại: <a href="tel:(84.28) 38966798" style="color:#fff">84.28 38966798</a> - Fax: 84.28 38964736</p>
+                    <p><i class="fa-solid fa-envelope fa-sm"></i>Email: <a href="mailto:info@utc2.edu.vn" style="color:#fff">info@utc2.edu.vn</a></p>
+                    <p><i class="fa-solid fa-globe fa-sm"></i>Website: <a href="http://phanhieu.utc.edu.vn" title="PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH" style="color:#fff">http://phanhieu.utc.edu.vn</a></p>
+                </div>
+                <div class="map-hcm">
+                    <h6>Phân hiệu Hồ Chí Minh</h6>
+                    <iframe allowfullscreen="" height="140" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
+                </div>
+            </div>
+            <div class="contact__it3">
+                <div class="apputc">
+                    <h6>App MyUTC</h6>
+                    <div class="apputc__listapp">
+                        <a class="app-item" href="https://apps.apple.com/vn/app/eutc/id6447959887?l=vi" title="Apple Store" style="padding: 20px;">
+                            <span><i class="fab fa-apple app-icon"></i></span>
+                            <span class="app-title" style="font-size: 16px;">Apple Store</span>
+                        </a>
+                        <a class="app-item" href="https://play.google.com/store/apps/details?id=vn.edu.utc.eutc&amp;hl=vi-VN" title="Google Play" style="padding: 20px;">
+                            <span class="fab fa-google-play app-icon"></span>
+                            <span class="app-title" style="font-size: 16px;">Google Play</span>
+                        </a>
+                    </div>
+                </div>  
+                <div class="fl-utc">
+                    <h6>Theo dõi UTC</h6>
+                    <div class="icon-contact">
+                        <a href="https://www.facebook.com/dhgtvtcaugiay" class="fb" style="padding: 20px;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@UTC_Channel" class="ytb" style="padding-right: 20px;"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="mailto:dhgtvt@utc.edu.vn" class="mail"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+    <p style="text-align: center; background-color: #012750; padding-top: 30px;padding-bottom: 70px;"><a href="https://github.com/Youknow2509/btl_web" style="font-size: 14px;">@2023 Bản quyền thuộc Trường Đại học Giao thông vận tải (N8)</a></p>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/thamkhao/JS/p4.js"></script>
 </body>
