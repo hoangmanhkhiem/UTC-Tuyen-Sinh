@@ -452,9 +452,6 @@ header.fixed {
     background-color: var(--second-bg);
 }
 
-.suggest-item+.suggest-item {
-}
-
 /* slider */
 .slider {
     width: 100%;
