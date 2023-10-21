@@ -1,0 +1,105 @@
+@media screen and (max-width: 980px) {
+    /* footer */
+    img {
+        align-items: center;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .contact__it1 {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .contact__it2 {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .contact__it3 {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .hn {
+        flex: 1;
+        padding: 20px 0;
+    }
+    .map-hn {
+        padding-left: 0px;
+        flex: 1;
+    }
+    .hcm {
+        flex: 1;
+        padding: 20px 0;
+    }
+    .map-hcm {
+        padding-left: 0px;
+        flex: 1;
+    }
+    .contact p a {
+        font-size: 14px;
+    }
+    .contact h6 {
+        font-size: 16px;
+    }
+    .apputc {
+        flex: 1;
+    }
+    .fl-utc {
+        padding-left: 0px;
+        flex: 1;
+    }
+    .map-hcm iframe{
+        height: 120px;
+    }
+    /* header */
+    .header-list {
+        display: none;
+    }
+    .header-img {
+        display: none;
+    }
+    .header-bars {
+        display: block;
+        align-items: center;
+        justify-items: center;
+        padding: 20px 0;
+    }
+    .header-search {
+        border-radius: 10px;
+        flex: 1;
+        padding: 0 0 0 40px;
+    }
+    .header-search input {
+        flex: 1;
+    }
+    .p2 {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 40px;
+    }
+    .form {
+        padding: 20px;
+    }
+    .pt-tuyensinh__list {
+        flex-direction: column;
+    }
+    .pt-tuyensinh__list-item {
+        width: 60%;
+        text-align: center;
+        margin: 20px;
+        min-height: 360px;
+    }
+    .p3 {
+        padding: 20px;
+    }
+    .p4-it {
+        flex-direction: column;
+    }
+    .p4-it__solieu {
+        width: 100%;
+    }
+}
