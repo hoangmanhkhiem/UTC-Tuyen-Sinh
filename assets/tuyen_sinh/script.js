@@ -1,3 +1,9 @@
+// bấm img logo reload
+const header_img = document.querySelector('.header-img');
+const header_img_icon = header_img.querySelector('img');
+header_img_icon.addEventListener('click', function() {
+    location.reload();
+});
 /* bars va menu-dow */
 const bt_bars = document.querySelector('.header-bars');
 const icon_bars = bt_bars.querySelector('i');

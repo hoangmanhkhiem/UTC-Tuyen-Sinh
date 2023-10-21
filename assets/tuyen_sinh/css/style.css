@@ -166,6 +166,9 @@ header a {
 .header-list-down a:hover {
     opacity: 0.6;
 }
+.header-img img:hover {
+    cursor: pointer;
+}
 /* footer */
 footer {
     background-color: var(--main-bg);
@@ -268,7 +271,7 @@ form {
     width: 100%;
     padding: 12px 20px;
     outline: none;
-    background-color: var(--form--bg);
+    background-color: #e8f0fe;
     color: black;
 }
 
