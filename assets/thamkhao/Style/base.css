@@ -173,6 +173,8 @@ header a {
 .header-list a{
     font-size: 20px;
     padding: 0px 8px;
+    font-weight: 600;
+    color: #fff;
 }
 
 .header-bars {
@@ -217,7 +219,7 @@ header a {
 
 .header-search__icon {
     background-color: #012750   ;
-    padding: 1px 16px;
+    padding: 5px 18px 1px;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
     height: 35px;
