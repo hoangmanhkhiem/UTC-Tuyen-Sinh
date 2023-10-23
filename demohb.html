@@ -18,29 +18,52 @@
 </head>
 <body>
     <header>
-        <div class="header__logo">
-            <img src="./assets/thamkhao/Images/logo.png" alt="">
+        <div class="header-img">
+            <img src="assets/thamkhao/Images/logo-utc.png" alt="logo-utc">
         </div>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars"></i>
+        <div class="header-bars">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+            <!-- <i class="fa-solid fa-xmark fa-2xl"></i> -->
         </div>
-        <div class="header__menu">
-            
-            <ul class="nav__list">
-                <li class="nav__item"><a href="./index.html" class="nav__item-link">Trang chủ</a></li>
-                <li class="nav__item"><a href="./major-infor.html" class="nav__item-link">Khoa Ngành</a></li>
-                <li class="nav__item"><a href="./Thongtinxettuyen.html" class="nav__item-link">Thông tin tuyển sinh</a></li>
-                <li class="nav__item"><a href="./more-infor.html" class="nav__item-link">Thông tin tham khảo</a></li>
-            </ul>
+        <div class="header-list">
+            <a href="index.html" class="header-bars__trangchu">Trang chủ</a>
+            <a href="tuyensinh.html" class="header-bars__nghanhhoc">Tuyển Sinh</a>
+            <a href="bomon.html" class="header-bars__tuyensinh">Bộ Môn</a>
+            <a href="daotao.html" class="header-bars__thamkhao open-it">Tham Khảo</a>
         </div>
-        <div class="header__search">
-            <div class="search">
-                <input type="text" class="search__input" placeholder="Tìm kiếm ..." >
-                <div class="search__icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+
+        <div class="list-notification">
+            <div class="notification success-notification" id="success">
+                <div class="icon_notification">
+                    <i class="fa-solid fa-circle-check"></i>
                 </div>
-                <ul class="suggestions">
-                </ul>
+                <div class="mess-text">
+                    <h3>Thành công</h3> 
+                    <p>Bạn đã đăng kí nhận tư vấn thành công</p>
+                </div>
+            </div>
+            <div class="notification error-notification" id="error">
+                <div class="icon_notification">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div class="mess-text">
+                    <h3>Lỗi</h3> 
+                    <p>Vui lòng nhập lại dữ liệu</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header-list-down">
+            <a href="index.html" class="header-bars__trangchu">Trang chủ</a>
+            <a href="tuyensinh.html" class="header-bars__nghanhhoc">Tuyển Sinh</a>
+            <a href="bomon.html" class="header-bars__tuyensinh">Bộ Môn</a>
+            <a href="daotao.html" class="header-bars__thamkhao open-it">Tham Khảo</a>
+        </div>
+        <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm ...">
+            <div class="header-search__icon">
+                <i class="fa-solid fa-magnifying-glass fa-sm"></i>
             </div>
         </div>
     </header>
@@ -73,8 +96,11 @@
         .hocbong h3{
             padding: 30px 0;
         }
-        #menu-icon-1 li:hover{
+        #menu-icon-1 li:hover a{
             color: black;
+        }
+        #menu-icon-1 li:hover{
+            /* color: black; */
             cursor : pointer;
         }
         .fa-tags{
@@ -92,17 +118,19 @@
             width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
+            /* background-color: #f1f1f1; */
+            /* border: 1px solid #ccc; */
             border-radius: 5px;
-            position: fixed;
+            position: absolute;
             z-index: 20;
             top: 35%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: none;
         }
-        
+        #myElement form{
+            border: solid 1px #ccc;
+        }
         h4 {
             margin-top: 0;
         }
@@ -112,11 +140,12 @@
             justify-content: space-between;
             margin-bottom: 20px;
         }
+        /* email */
         i.fa-xmark:hover{
             color: red;
         }
         i.fa-xmark {
-            color: rgb(2, 1, 1);
+            color:#ccc;
             font-size: 20px;
             cursor: pointer;
         }
@@ -160,15 +189,77 @@
         .hoc-phi >p{
             padding: 5px 15px 5px 0;
         }
-        @media (max-width : 739px){
+         @media (max-width : 739px){
             .container{
                 display: block;
             }
             .content-web,.post-list{
                 width: 100%;
             }
+            .hocbong{
+                width: 100%;
+            }
         }
-    </style>
+        #menu-hb li{
+            cursor: pointer;
+        }
+        .link{
+            color: blue;
+        }
+        a:hover{
+            color: skyblue;
+        }
+        
+        /* modal */
+        .modal {
+            position:fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 20;
+            overflow-y: scroll;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);   
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--text-color);
+            display: none;
+            transition: 0.3s ease;
+            animation: fadeIn 0.3s ease;
+        }
+        .code span {
+            color: var(--main-yellow);
+        }
+        .modal h3 {
+            margin-top: 8px;
+        }
+        .modal span {
+            font-weight:600;
+        }
+        .modal-container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 24px 40px;
+            position: relative;
+            border-radius: 1.6rem;
+        }
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .close-modal .fa-solid{
+            padding-left: 10px;
+        }
+        .modal .title {
+            font-size: 2rem;
+            text-align: center;
+            margin: 16px;
+        }
+        </style>
 
     <section>
         <div class="container">
@@ -176,7 +267,7 @@
                 <h1>HỌC BỔNG</h1>
                 <p><i class="fa-regular fa-clock"></i>Thứ sáu - 07/10/2022 14:32</p>
                 <ul id="menu-icon-1">
-                    <li><a title="Lưu bài viết này"><i class="fa-solid fa-bookmark" onclick="window.save()"></i></a></li>
+                    <li><a title="Lưu bài viết này"><i class="fa-solid fa-bookmark"></i></a></li>
                     <li><a title="In ra"><i class="fa-solid fa-print" onclick="window.print()"></i></a></li>
                     <li><a title="Giới thiệu bài viết cho bạn bè"><i onclick="showElement()" class="fa-solid fa-envelope"></i></a></li>
                 </ul>
@@ -186,22 +277,21 @@
                     <li><a class="hb-hien">2. Học bổng tài trợ</a></li>
                     <li><a class="hb-hien">3. Học bổng trao đổi sinh viên quốc tế</a></li>
                 </ul>
-                <h3>Các thông tin về học bổng xem <a href="">TẠI ĐÂY</a></h3>
+                <h3>Các thông tin về học bổng xem <a class="link" href="">TẠI ĐÂY</a></h3>
                 <h3>Một số thông tin về học bổng dành cho Tân sinh viên Đại học Giao thông vận tải</h3>
                 <ul id="menu-khoa">
+                    <li><a href="">Công nghệ thông tin CLC</a></li>
+                    <li><a href="">Khao học máy tính</a></li>
                     <li><a href="">Công nghệ thông tin</a></li>
-                    <li><a href="">Cơ khí</a></li>
-                    <li><a href="">Khoa Điện - Điện tử</a></li>
-                    <li><a href=""></a>Tự động hóa</li>
                 </ul>
-                <p><i class="fa-solid fa-tags"></i>: <a href="">học bổng</a>, <a href="">Học bổng khuyến khích học tập</a>, <a href="">Học bổng trao đổi</a>, <a href="">học bổng doanh nghiệp</a></p>
+                <p><i class="fa-solid fa-tags"></i>: <a class="link" href="">học bổng</a>, <a class="link" href="">Học bổng khuyến khích học tập</a>, <a class="link" href="">Học bổng trao đổi</a>, <a class="link" href="">học bổng doanh nghiệp</a></p>
                 <h1>NHỮNG TIN CŨ HƠN</h1>
-                <h1 ><a ><i class="fa-solid fa-chevron-right"></i>HỌC PHÍ(31/01/2022)</a></h1>
+                <h1 ><i class="fa-solid fa-chevron-right"></i>HỌC PHÍ(31/01/2022)</h1>
                 <div class="hoc-phi">
                     <p><i class="fa-regular fa-clock"></i>Thứ hai - 31/01/2022 09:03</p>
                     <p><b>Lộ trình tăng học phí từ 2020 đến 2025: </b>mức tăng trung bình khoảng 8%/năm học và không vượt quá mức 10%/năm học đối với từng chương trình đang triển khai đào tạo để phù hợp lộ trình tính đúng, tính đủ chi phí đào tạo vào học phí đến năm 2025.</p>
-                    <p>Thông tin về học phí năm học 2022 - 2023 xem <a href="" style="font-weight: bold;color: skyblue;">TẠI ĐÂY</a></p>
-                    <p>Thông tin về mức học phí các chương trình đào tạo xem <a href="" style="font-weight: bold;color: skyblue;">TẠI ĐÂY</a></p>
+                    <p>Thông tin về học phí năm học 2022 - 2023 xem <a class="link" href="" style="font-weight: bold;   ">TẠI ĐÂY</a></p>
+                    <p>Thông tin về mức học phí các chương trình đào tạo xem <a class="link" href="" style="font-weight: bold   ">TẠI ĐÂY</a></p>
 
                 </div>
             </div>
@@ -210,22 +300,22 @@
                     <h2>BÀI VIẾT LIÊN QUAN</h2>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate1.jpg" alt="">
-                        <h3>Bandwidth là gì? Tất tần tật thông tin mà bạn cần biết về băng thông</h3>
+                        <h3>Lễ trao học bổng GSS cho sinh viên</h3>
                         <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate2.jpg" alt="" width="100%">
-                        <h3>Các kiểu dữ liệu trong Python gồm những gì? Các thành phần cơ bản trong Python bạn cần biết</h3>
+                        <h3>Lễ trao học bổng Daeyoun</h3>
                         <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate3.jpg" alt="">
-                        <h3>Coder là gì? Người Coder cần có những tố chất nào? </h3>
+                        <h3>Lễ trao học bổng Kawakin năm học 2019 – 2020 </h3>
                         <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                     <div class="post-item">
                         <img src="assets/thamkhao/Images/relate4.jpg" alt="">
-                        <h3>Hibernate là gì? Tất tần tật kiến thức liên quan về Hibernate </h3>
+                        <h3>Lễ kỷ niệm 10 năm Học bổng đăng kiểm Việt Nam</h3>
                         <p><i class="fa-regular fa-clock"></i>30/1/2023</p>
                     </div>
                 </div>
@@ -248,8 +338,9 @@
     
                         <div class="form-field">
                             <select id="register-seclect" class="form-input">
-                                <option value="CQ-DT">Đại học Chính quy (Hệ đại trà) </option>
-                                <option value="CQ-CLC">Đại học Chính quy (Chất lượng cao)</option>
+                                <option value="CQ-DT">Công nghệ thông tin (Chất lượng cao)</option>
+                                <option value="CQ-CLC">Công nghệ thông tin</option>
+                                <option value="CQ-DT">Khao học máy tính</option>
                             </select>
                             <label for="register-seclect" class="form-label">Hệ đào tạo</label>
                         </div>
@@ -312,76 +403,63 @@
         </form>
     </article>
 
-    <button class="chat-btn"><i class="fa-brands fa-facebook-messenger"></i></button>
-    <button class="to-top"><a href="#"><i class="fa-solid fa-circle-up"></i></a></button>
     <footer>
-        <div class="container">
-            <div class="contact-list">
-                <div class="footer__logo">
-                    <img src="./assets/thamkhao/Images/logo-ngang.png" alt="UTC" >
+        <img src="assets/thamkhao/Images/logofooter-gtvt.png" alt="logo-utc">
+        <div class="contact">
+            <div class="contact__it1">
+                <div class="hn">
+                    <p><i class="fa-solid fa-location-dot fa-sm"></i>Địa chỉ: Số 3 phố Cầu Giấy, P.Láng Thượng, Q.Đống Đa, Hà Nội.</p>
+                    <p><i class="fa-solid fa-phone fa-sm"></i>Điện thoại: <a href="tel:(84.24) 37663311" style="color:#fff">84.24 37663311</a> - Fax: 84.24 37669613</p>
+                    <p><i class="fa-solid fa-envelope fa-sm"></i>Email: <a href="mailto:dhgtvt@utc.edu.vn" style="color:#fff">dhgtvt@utc.edu.vn</a></p>
                 </div>
-                <!-- cSC -->
-                <ul class="contacts">
-                    <li class="contact footer__item"><a href="#">
-                        <i class="fa-solid fa-location-dot"></i> Địa chỉ: 3 Đ. Cầu Giấy, Láng Thượng, Đống Đa, Hà Nội
-                    </a></li>
-                    <li class="contact footer__item"><a href="#">
-                        <i class="fa-solid fa-phone"></i> Điện thoại: (84.24) 37663311 - Fax: (84.24)37669613
-                    </a></li>
-                    <li class="contact footer__item"><a href="#">
-                        <i class="fa-solid fa-envelope"></i> Email: dhgtvt@utc.edu.vn
-                    </a></li>
-
-                </ul>
-                <!-- PH -->
-                <br><br>
-                <div>
-                    <ul class="contacts">
-                        <h3>PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH</h3>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-location-dot"></i> 450-451 Đường Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh
-                        </a></li>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-phone"></i> Điện thoại: (84.28) 38966798 - Fax: (84.28)38964736
-                        </a></li>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-envelope"></i> Email: info@utc2.edu.vn
-                        </a></li>
-                        <br>
-                        <li class="contact footer__item"><a href="#">
-                            <i class="fa-solid fa-globe"></i>Website:http://phanhieu.utc.edu.vn
-                        </a></li>
-                    </ul>
+                <div class="map-hn">
+                    <h6>Trường Đại học Giao thông vận tải</h6>
+                    <iframe allowfullscreen="" height="120" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
                 </div>
-
-                
             </div>
-            <div class="facility-list">
-                <h3 class="title-2 footer__title">Cơ sở trực thuộc</h3>
-                <ul class="facilities">
-                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải</a> </li>
-                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.1228608575834!2d105.80064111432421!3d21.02776948599887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBHaWFvIHRow7RuZyBW4bqtbiB04bqjaQ!5e0!3m2!1svi!2s!4v1539544397383" style="border-radius:25px;border:0;width:100%"></iframe>
-                    <li class="facility footer__item"><a href="#">Trường Đại học Giao thông vận tải - Phân hiệu Hồ Chí Minh</a> </li>
-                    <iframe class="ng-tns-c0-0" allowfullscreen="" height="200" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
-                </ul>
-            </div> 
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <p>University of Transport and Communications  © 2023.All Right Reserved.</p>
-                <ul class="socials">
-                    <li class="social"><a href="https://www.facebook.com/dhgtvtcaugiay"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li class="social"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li class="social"><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
-                </ul>
+            <div class="contact__it2">
+                <div class="hcm">
+                    <h6>PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH</h6>
+                    <p><i class="fa-solid fa-location-dot fa-sm"></i>Địa chỉ: 450-451 Đường Lê Văn Việt, Phường Tăng Nhơn Phú A, TP. Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh</p>
+                    <p><i class="fa-solid fa-phone fa-sm"></i>Điện thoại: <a href="tel:(84.28) 38966798" style="color:#fff">84.28 38966798</a> - Fax: 84.28 38964736</p>
+                    <p><i class="fa-solid fa-envelope fa-sm"></i>Email: <a href="mailto:info@utc2.edu.vn" style="color:#fff">info@utc2.edu.vn</a></p>
+                    <p><i class="fa-solid fa-globe fa-sm"></i>Website: <a href="http://phanhieu.utc.edu.vn" title="PHÂN HIỆU TẠI THÀNH PHỐ HỒ CHÍ MINH" style="color:#fff">http://phanhieu.utc.edu.vn</a></p>
+                </div>
+                <div class="map-hcm">
+                    <h6>Phân hiệu Hồ Chí Minh</h6>
+                    <iframe allowfullscreen="" height="140" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.548623005066!2d106.79235511526065!3d10.845813560873742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527158a0a5b81%3A0xf45c5d34ac580517!2zUEjDgk4gSEnhu4ZVIFRSxq_hu5xORyDEkEggR1RWVCBU4bqgSSBUUC4gSOG7kiBDSMONIE1JTkg!5e0!3m2!1svi!2s!4v1615861797127!5m2!1svi!2s" style="border-radius:25px;border:0;width:100%"></iframe>
+                </div>
+            </div>
+            <div class="contact__it3">
+                <div class="apputc">
+                    <h6>App MyUTC</h6>
+                    <div class="apputc__listapp">
+                        <a class="app-item" href="https://apps.apple.com/vn/app/eutc/id6447959887?l=vi" title="Apple Store" style="padding: 20px;">
+                            <span><i class="fab fa-apple app-icon"></i></span>
+                            <span class="app-title" style="font-size: 16px;">Apple Store</span>
+                        </a>
+                        <a class="app-item" href="https://play.google.com/store/apps/details?id=vn.edu.utc.eutc&amp;hl=vi-VN" title="Google Play" style="padding: 20px;">
+                            <span class="fab fa-google-play app-icon"></span>
+                            <span class="app-title" style="font-size: 16px;">Google Play</span>
+                        </a>
+                    </div>
+                </div>  
+                <div class="fl-utc">
+                    <h6>Theo dõi UTC</h6>
+                    <div class="icon-contact">
+                        <a href="https://www.facebook.com/dhgtvtcaugiay" class="fb" style="padding: 20px;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@UTC_Channel" class="ytb" style="padding-right: 20px;"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="mailto:dhgtvt@utc.edu.vn" class="mail"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+    <p style="text-align: center; background-color: #012750; padding-top: 30px;padding-bottom: 70px;"><a href="https://github.com/Youknow2509/btl_web" style="font-size: 14px;">@2023 Bản quyền thuộc Trường Đại học Giao thông vận tải (N8)</a></p>
+    <div class="btn-top">
+        <i class="fa-solid fa-circle-up fa-bounce fa-xl" style="color: #181818;"></i>    
+    </div>
     <script>
-    //    function showHocphi(){
-    //         var showHocphi = document.getElementsByClassName('hoc-phi');
-    //         showHocphi.style.display = 'block';
-    //     }
         function showElement(){
             var showElements = document.getElementById('myElement');
             showElements.style.display = 'block';
@@ -393,5 +471,6 @@
       </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/thamkhao/JS/p4.js"></script>
+    <script src="./assets/thamkhao/JS/script.js"></script>
 </body>
 </html>
