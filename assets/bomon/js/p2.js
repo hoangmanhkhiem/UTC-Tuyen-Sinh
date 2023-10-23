@@ -1,7 +1,6 @@
 window.onload = function(){
     //to top btn
     var toTopBtn = document.querySelector(".to-top");
-    var chatBtn = document.querySelector("button.chat-btn");
 
     function scrollFunction() {
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -54,7 +53,6 @@ window.onload = function(){
     if(document.body.clientWidth < 739 || document.documentElement.clientWidth < 739) {
         swipeBtn.onclick = function() {
             sideInfor.classList.toggle("fixed");
-
             swipeBtn.classList.toggle("swipe-left-btn");
             swipeBtn.classList.toggle("swipe-right-btn");
         }
@@ -71,39 +69,61 @@ window.onload = function(){
     var formMessage = document.querySelector(".form-message");
     var formMessageText = document.querySelector(".message-text");
 
-    for(var i of formInput) {
-    i.onchange = function() {
-        for(var i=0; i<formInput.length; i++) {
-        formValue[i] = formInput[i].value;
+    // Biểu thức chính quy kiểm tra email
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    // Biểu thức chính quy kiểm tra số điện thoại (số có 10 chữ số)
+    var phoneRegex = /^\d{10}$/;
+
+    for (var i of formInput) {
+        i.onchange = function() {
+            for (var i = 0; i < formInput.length; i++) {
+                formValue[i] = formInput[i].value;
+            }
         }
-    }
     }
 
     function checkForm(form) {
-    var count= 0;
-    for(var i=0; i<form.length; i++) {
-        if(form[i] != "")
-        count++;
+        var count = 0;
+        for (var i = 0; i < form.length; i++) {
+            if (i === 1) {
+                if (!emailRegex.test(form[i])) {
+                    formInput[i].classList.add("invalid");
+                    count++;
+                } else {
+                    formInput[i].classList.remove("invalid");
+                }
+            } else if (i === 2) {
+                if (!phoneRegex.test(form[i])) {
+                    formInput[i].classList.add("invalid");
+                    count++;
+                } else {
+                    formInput[i].classList.remove("invalid");
+                }
+            } else if (form[i] === "") {
+                count++;
+            }
+        }
+        return count;
     }
-    return count;
-    }
+
     submitBtn.onclick = function() {
-    var count = checkForm(formValue);
-    if(count>0 && count === formValue.length && count != undefined) {
-        formMessage.classList.add("success","message-show")
-        formMessageText.innerHTML = `<h3>Thành công</h3> Bạn đã đăng kí nhận tư vấn thành công.`;
-        setTimeout(function() {
-        formMessage.classList.remove("success", "message-show");
-        }, 3000)
+        var count = checkForm(formValue);
+        if (count === 0) {
+            formMessage.classList.add("success", "message-show")
+            formMessageText.innerHTML = `<h3>Thành công</h3> Bạn đã đăng ký nhận tư vấn thành công.`;
+            setTimeout(function() {
+                formMessage.classList.remove("success", "message-show");
+            }, 3000)
+        } else {
+            formMessage.classList.add("fail", "message-show")
+            formMessageText.innerHTML = `<h3>Thất bại!</h3> Bạn vui lòng điền đầy đủ thông tin và kiểm tra email và số điện thoại.`;
+            setTimeout(function() {
+                formMessage.classList.remove("fail", "message-show");
+            }, 3000)
+        }
     }
-    else {
-        formMessage.classList.add("fail","message-show")
-        formMessageText.innerHTML = `<h3>Thất bại! </h3> Bạn vui lòng điền đày đủ thông tin.`;
-        setTimeout(function() {
-        formMessage.classList.remove("fail", "message-show");
-        }, 3000)
-    }
-    }
+
 
         
 }
@@ -119,4 +139,4 @@ const facultyItems = document.querySelectorAll(".faculty-list");
             }
             navItems[n-1].classList.add("current");      
             facultyItems[n-1].style.display = 'block';
-        }``
+        }

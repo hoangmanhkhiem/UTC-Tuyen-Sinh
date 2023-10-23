@@ -1,5 +1,7 @@
 @media (max-width : 739px){
-    .side-infor{}
+    .side-infor{
+        width: 100%;
+    }
     .title-1 {
         font-size: 2.2rem;
         text-align: center;
@@ -63,7 +65,7 @@
     .header__logo {
         display: none !important;
     }
-/* trang 1 */
+/* footer */
     .major-program {
         width: 100%;
     }
@@ -83,10 +85,13 @@
         flex-direction: column-reverse;
         padding: 20px;
     }
+    .map{
+        width: 100%;
+    }
     .socials {
         margin-bottom: 12px;
     }
-/* trang 2 */
+/* infor */
     .facility-list, .contact-list {
         width: 100%;
         padding: 12px;
