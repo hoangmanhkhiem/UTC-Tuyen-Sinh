@@ -136,6 +136,7 @@
         align-items: center;
         justify-items: center;
         padding: 20px 0;
+        color: #fff;
     }
     .header-search {
         border-radius: 10px;
