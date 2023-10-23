@@ -178,6 +178,8 @@ top: 1px;
 }
 .side-section + .side-section {
     margin-top: 54px;
+    display: flex;
+    flex-direction: column;
 }
 /* side infor */
 .side-infor {
