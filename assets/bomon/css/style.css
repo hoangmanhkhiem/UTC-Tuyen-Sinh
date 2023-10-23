@@ -105,7 +105,6 @@ display: none;
 }
 .header__logo img{
 position: relative;
-width: 64px;
 height: 64px;
 display: block;
 align-items: center;
@@ -178,11 +177,15 @@ top: 1px;
 }
 .side-section + .side-section {
     margin-top: 54px;
+    display: flex;
+    flex-direction: column;
 }
 /* side infor */
 .side-infor {
     width: 33.333%;
     padding-left: 48px;
+    display: flex;
+    flex-direction: column;
     transition: all 0.3s ease;
 }
 .heading-on-mobile {
