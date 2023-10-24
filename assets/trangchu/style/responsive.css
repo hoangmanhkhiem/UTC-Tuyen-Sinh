@@ -110,10 +110,12 @@
 
     .attraction__icon {
         margin: 0 auto;
+
     }
 
     .attraction__title {
         max-height: 32px;
+        text-align: center;
     }
 
     .attraction__item a {
@@ -142,29 +144,6 @@
 
     .major-program + .major-program {
         margin-top: 40px;
-    }
-
-    .map iframe {
-        height: 300px;
-    }
-
-    footer .container{
-        align-items: center;
-    }
-
-    .contact-list,.facility-list{
-        width: 100%;
-    }
-    .content{
-        display: block;
-    }
-    .modal-container {
-        width: 100%;
-        padding: 40px 16px 16px;
-        margin: 4px 8px;
-    }
-    .facilities{
-        display: block;
     }
 
     /* form  */
@@ -227,23 +206,61 @@
         color: #ea4e2c;
         border-color: #ea4e2c;
     }
-    footer .container{
+    /* footer */
+    img {
         align-items: center;
     }
-
-    .contact-list,.facility-list{
-        width: 100%;
+    .contact {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
-    .content{
-        display: block;
+    .contact__it1 {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
     }
-    .modal-container {
-        width: 100%;
-        padding: 40px 16px 16px;
-        margin: 4px 8px;
+    .contact__it2 {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
     }
-    .facilities{
-        display: block;
+    .contact__it3 {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .hn {
+        flex: 1;
+        padding: 20px 0;
+    }
+    .map-hn {
+        padding-left: 0px;
+        flex: 1;
+    }
+    .hcm {
+        flex: 1;
+        padding: 20px 0;
+    }
+    .map-hcm {
+        padding-left: 0px;
+        flex: 1;
+    }
+    .contact p a {
+        font-size: 14px;
+    }
+    .contact h6 {
+        font-size: 16px;
+    }
+    .apputc {
+        flex: 1;
+    }
+    .fl-utc {
+        padding-left: 0px;
+        flex: 1;
+    }
+    .map-hcm iframe{
+        height: 120px;
     }
     /* demo article */
     .content-wrapper {
