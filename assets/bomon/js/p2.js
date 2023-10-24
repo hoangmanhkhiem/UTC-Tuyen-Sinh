@@ -61,56 +61,51 @@ window.onload = function(){
         }
     }
     // validation form
-
-    var formInput = document.querySelectorAll(".form-input");
-    var formValue = [];
+    var nameInput = document.getElementById('name');
+    var emailInput = document.getElementById('email');
+    var phoneInput = document.getElementById('phone');
+    var commentInput = document.getElementById('register-question');
     var submitBtn = document.querySelector("button.submit");
-    var formMessageList = document.querySelector(".form-message-list");
     var formMessage = document.querySelector(".form-message");
     var formMessageText = document.querySelector(".message-text");
     
-    for (var i of formInput) {
-      i.oninput = function () {
-        formValue = Array.from(formInput).map(function (input) {
-          return input.value;
-        });
-      }
+    function checkName(nameInput) {
+        return /^[^0-9]+$/.test(nameInput.value) && nameInput.value.trim().includes(' ');
     }
     
-    function checkForm(values) {
-      var count = 0;
-      for (var i = 0; i < values.length; i++) {
-        if (i === 0 && /^[A-Za-z]+\s[A-Za-z]+$/.test(values[i])) {
-          count++;
-        } else if (i === 1 && /^[0-9]{10}$/.test(values[i])) {
-          count++;
-        } else if (i === 2 && /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(values[i])) {
-          count++;
-        } else if (values[i] !== "") {
-          count++;
-        }
-      }
-      return count;
+    function checkEmail(emailInput) {
+        return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(emailInput.value);
+    }
+    
+    function checkPhone(phoneInput) {
+        return /^\+*[0-9]+$/.test(phoneInput.value);
+    }
+    
+    function checkCom(commentInput) {
+        return commentInput.value.trim() !== '';
     }
     
     submitBtn.onclick = function () {
-      var count = checkForm(formValue);
-      if (count === formValue.length) {
-        formMessage.classList.add("success", "message-show");
-        formMessageText.innerHTML = `<h3>Thành công</h3> Bạn đã đăng kí nhận tư vấn thành công.`;
-        setTimeout(function () {
-          formMessage.classList.remove("success", "message-show");
-        }, 3000);
-      } else {
-        formMessage.classList.add("fail", "message-show");
-        formMessageText.innerHTML = `<h3>Thất bại! </h3> Bạn vui lòng điền đầy đủ thông tin và đúng định dạng.`;
-        setTimeout(function () {
-          formMessage.classList.remove("fail", "message-show");
-        }, 3000);
-      }
+        var isNameValid = checkName(nameInput);
+        var isEmailValid = checkEmail(emailInput);
+        var isPhoneValid = checkPhone(phoneInput);
+        var isCommentValid = checkCom(commentInput);
+    
+        if (isNameValid && isEmailValid && isPhoneValid && isCommentValid) {
+            formMessage.classList.add("success", "message-show");
+            formMessageText.innerHTML = `<h3>Thành công</h3> Bạn đã đăng kí nhận tư vấn thành công.`;
+            setTimeout(function () {
+                formMessage.classList.remove("success", "message-show");
+            }, 3000);
+        } else {
+            formMessage.classList.add("fail", "message-show");
+            formMessageText.innerHTML = `<h3>Thất bại! </h3> Bạn vui lòng điền đầy đủ thông tin và đúng định dạng.`;
+            setTimeout(function () {
+                formMessage.classList.remove("fail", "message-show");
+            }, 3000);
+        }
     }
-
-        
+    
 }
 // navigation
 
