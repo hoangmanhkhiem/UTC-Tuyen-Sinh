@@ -1,11 +1,9 @@
 # Trường Đại học GTVT Hà Nội
 # Bài tập lớn môn thiết kế web
 
-## Chủ đề : Thiết kế website tuyển sinh của trường ĐH Giao thông vận tải
+## Chủ đề : Thiết kế website Khoa công nghệ thông tin của trường ĐH Giao thông vận tải
 
 ### Công nghệ
-
-  - Framework : JQuery
 
 ## Thông tin thành viên nhóm 9
 ||||||
