@@ -12,7 +12,6 @@ window.addEventListener("load", function () {
   }, 0);
 
   // slider
-  const slider = document.querySelector(".slider");
   const sliderMain = document.querySelector(".slider-main");
   const sliderItems = document.querySelectorAll(".slider-item");
   const prevBtn = document.querySelector(".slider-prev");

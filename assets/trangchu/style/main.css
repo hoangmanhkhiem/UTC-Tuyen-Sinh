@@ -1,4 +1,4 @@
-/* slider */
+slider
 
 .slider, .slider img {
     width: 100%;
@@ -161,15 +161,6 @@
     
 }
 
-.map {
-    width: 100%;
-}
-
-.map iframe{
-    box-shadow: 3px 4px 6px #ccc;
-    border-radius: 4px;
-    margin-top: 12px;
-}
 *demo
 article {
     margin-top: 32px;
